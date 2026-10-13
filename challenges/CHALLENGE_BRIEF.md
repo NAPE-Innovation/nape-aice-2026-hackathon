@@ -10,7 +10,7 @@ Decades of subsurface records contain information that can inform energy decisio
 Six finalist teams will be allocated to two challenge tracks (three per track) by a witnessed random draw at the hackathon kickoff.
 
 ## Data and access
-The challenges use curated materials from the publicly released **Volve Field** dataset. The approved, challenge-specific dataset will be **preloaded onto the laptop provided to your team**. No dataset download is required. See [Data access](../docs/data-access.md) for event-day access instructions. Use only the **approved participant release** for your assigned challenge. Organiser-only references, withheld numerical ground truth and evaluation questions are not available to participants. Seismic/VSP processing is **not required**.
+The challenges use curated materials from the publicly released **Volve Field** dataset. The approved, challenge-specific dataset will be **preloaded onto the laptop provided to your team**. No dataset download is required. See [Data access](../docs/data-access.md) for event-day access instructions. Use only the **approved participant release** for your assigned challenge. Organiser-only references, withheld numerical ground truth and evaluation questions are not available to participants.
 
 ## Challenge 1 — Legacy Well Log Digitisation
 
