@@ -35,10 +35,13 @@ Open-source tools, public pretrained models and AI coding assistants may be used
 ## 5. Submissions, attribution and intellectual property
 
 - Each team must submit its required machine-readable outputs **and a working codebase, notebook or application**, plus a README and demonstration, as specified in the approved challenge brief.
-- Participants retain ownership of original work they create **unless a separate, expressly agreed written arrangement provides otherwise**. This agreement does not transfer ownership of participant-created intellectual property to NAPE, sponsors or organisers.
-- Participants must respect licences and rights in source data, third-party libraries, pretrained models and other materials; they may not claim ownership of the supplied Volve source material.
-- Teams grant the organisers a **non-exclusive, royalty-free permission** to access, run, reproduce internally and assess submitted materials for hackathon administration, judging, audit and verification. **Any public release, commercial use or transfer of submitted code or solutions requires separate permission or an approved release licence.**
-- Attribution to the underlying Volve data owner and any other required notices must follow the approved dataset licence and organiser guidance. **Exact attribution wording: [TO CONFIRM].**
+- **Participant ownership:** Participants retain ownership of original code, inventions, documentation and other intellectual property they create for the Hackathon, subject to third-party rights. Nothing in this agreement assigns that ownership to NAPE, its sponsors or organisers.
+- **Perpetual non-exclusive licence:** Each participant grants **[CONFIRM EXACT NAPE ORGANISING LEGAL ENTITY]** a worldwide, perpetual, non-exclusive, royalty-free licence to use, store, reproduce, run, test, modify, adapt, improve, create derivative works from, display, demonstrate, distribute and commercialise the participant-owned portions of their submitted Hackathon solution for educational, research, event, operational and commercial purposes. This licence does not prevent participants from using, licensing or commercialising their own work.
+- **Sharing and sublicensing:** Any right for NAPE to sublicense submitted work to sponsors or other third parties is **[TO CONFIRM BEFORE APPROVAL]**. Until confirmed, this draft does not grant sponsors an independent licence merely by virtue of sponsorship.
+- **Third-party and source-data limits:** Participants can license only rights they actually own or are authorised to license. This provision does not transfer ownership of the Volve dataset, third-party libraries, pretrained models, external datasets, or others' contributions, and cannot override applicable source-data or open-source licence terms. Participants must identify third-party components and applicable licences.
+- **Attribution:** NAPE will credit teams and creators when publicly showcasing their solutions where reasonably practicable, subject to privacy and safety considerations. Required attribution to the Volve source owner and any other source notices must follow the approved dataset licence. **Exact dataset attribution wording: [TO CONFIRM].**
+- **Originality and authority:** Each participant confirms they have the authority to grant the stated licence over their contribution and will identify any employer, collaborator or other ownership restrictions before submission. For team-owned work, all relevant contributors must accept the licence.
+- **No warranties beyond approved terms:** Liability, warranties and any indemnity language require separate legal review; no additional obligations are implied by this draft.
 
 ## 6. Publicity, recordings and personal information
 
@@ -50,7 +53,7 @@ Participants must follow venue safety directions, respect other teams and organi
 
 ## 8. Final legal provisions — approval required
 
-Before publication, the organisers must approve: the contracting organiser/legal entity; contact for incidents and privacy; applicable law and dispute process; eligibility and any age/guardian requirements; dataset licence and redistribution permissions; external API/data-processing rules; liability language; retention/deletion period; and any sponsor-specific IP or showcase terms. **No unapproved legal provision should be inferred from this draft.**
+Before publication, the organisers must approve: the contracting organiser/legal entity; contact for incidents and privacy; applicable law and dispute process; eligibility and any age/guardian requirements; dataset licence and redistribution permissions; external API/data-processing rules; liability language; retention/deletion period; and the exact licensee, sublicensing/sponsor access, commercial-use compatibility with third-party licences, and showcase terms. **No unapproved legal provision should be inferred from this draft.**
 
 ## Participant acceptance (final form)
 
