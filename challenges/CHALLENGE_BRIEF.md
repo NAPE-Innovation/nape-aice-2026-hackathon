@@ -1,0 +1,65 @@
+# NAPE AICE 2026 Hackathon — Participant Challenge Brief
+
+**Theme:** Unlocking Dormant Value  
+**Dates:** 7–8 November 2026 | **Venue:** Eko Hotel & Suites, Lagos  
+**Duration:** 48 hours | **Status:** Draft — subject to final release approval
+
+## Why this matters
+Decades of subsurface records contain information that can inform energy decisions, but historical well logs and technical documents are often difficult to search, analyse or integrate into modern workflows. Your mission is to transform dormant information into useful, verifiable digital assets.
+
+Six finalist teams will be allocated to two challenge tracks (three per track) by a witnessed random draw at the hackathon kickoff.
+
+## Data and access
+The challenges use curated materials from the publicly released **Volve Field** dataset. See [Data access](../docs/data-access.md) for the participant-package link and release status. Use the **approved participant release** for your assigned challenge. Organiser-only references, withheld numerical ground truth and evaluation questions are not available to participants. Seismic/VSP processing is **not required**.
+
+## Challenge 1 — Legacy Well Log Digitisation
+
+### Problem
+Historical logs preserved as raster images or PDFs are not directly usable as numerical depth-indexed curves. Manual digitisation is slow, and depth calibration, curve identification and poor image quality introduce uncertainty.
+
+### Mission
+Build an automated or semi-automated solution to recover accurate curve values at specified depths from supplied log images.
+
+### Supplied materials
+Relevant log image pages/combined PDF, page registry and metadata, and a depth/curve target template.
+
+### Required deliverables
+1. **Completed depth-indexed CSV** using the supplied `target_depths_template.csv` with columns `page_id,well,depth_m,curve,value,confidence,notes`. Preserve the target identifiers and depth/curve combinations. **LAS output is not required.**
+2. **Working solution:** reproducible code, notebook or application showing how the values were produced.
+3. **Technical README:** setup and execution steps; image preprocessing; curve identification; depth/value calibration; QC and confidence; assumptions, failure modes and limitations.
+4. **Demonstration:** show extraction on representative images, quality checks and practical use of the resulting numerical data.
+
+A strong solution will demonstrate extraction accuracy, appropriate depth registration, reproducibility and honest uncertainty reporting. Optional enhancements (batch processing, interactive QC, LAS export) cannot replace the CSV.
+
+## Challenge 2 — Intelligent Well Archive
+
+### Problem
+Technical and drilling information is scattered across historical PDF, HTML, XML and related records. Finding trustworthy answers manually can be slow, and unsupported answers can mislead users.
+
+### Mission
+Build a workflow that finds and answers technical questions from the supplied archive, with verifiable document evidence and appropriate uncertainty handling.
+
+### Supplied materials
+Curated archive documents, document metadata/manifest and an answers template.
+
+### Required deliverables
+1. **Completed answers CSV** following the supplied template with columns `question_id,answer,evidence,confidence,notes`. Evidence should identify supporting document paths or references.
+2. **Working solution:** reproducible code, notebook or application showing document processing, retrieval and/or extraction and answer generation.
+3. **Technical README:** setup and execution steps; document handling; retrieval/extraction; evidence provenance; confidence, ambiguity and unsupported-answer handling; limitations.
+4. **Demonstration:** answer representative questions and show where the evidence comes from.
+
+### Practice questions and evaluation
+An **open question set** will be provided for development and testing. The final open question set and answer-template IDs will be confirmed in the approved release. Solutions should work on **previously unseen questions**, not rely on hard-coded answers to the open examples. The evaluation procedure and final submission instructions will be communicated by organisers.
+
+A strong solution will return accurate, evidence-supported answers and recognise when the supplied archive does not justify an answer. Optional semantic search, RAG, interfaces and visualisations are welcome but not required.
+
+## Requirements applying to both challenges
+- Use the approved participant dataset for challenge-specific evidence.
+- Submit the required CSV **and** a working, explainable solution; a CSV alone is insufficient.
+- Provide source files, dependencies, run instructions, methodology, assumptions and limitations.
+- Disclose external services and models used; follow final event rules on APIs and data handling.
+- Be ready to demonstrate the solution within the hackathon.
+- Do not seek access to organiser-only reference/evaluation materials.
+- The submission channel, deadline, allowed external services and final evaluation details will be confirmed in the participant guide.
+
+**Goal:** Unlock existing data, reveal reliable insights and demonstrate practical value for subsurface workflows.
