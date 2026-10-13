@@ -1,15 +1,15 @@
-# Volve data access — DRAFT
+# Volve dataset access — DRAFT
 
 The hackathon uses selected materials from the publicly released Volve Field dataset.
 
-## Participant dataset package — pending final release validation
+## Dataset delivery at the event
 
-[**Volve Hackathon Participant Release (Google Drive ZIP)**](https://drive.google.com/file/d/1fhokqYCL3Dh078DlupN0BXVxHdX0d-zA/view)
+**Participants do not need to download the challenge dataset.** Organisers will preload the approved, challenge-specific dataset onto the laptops before handing them to teams at kickoff.
 
-**Important:** This is the currently prepared participant ZIP, **not yet approved for distribution or use as the final competition package**. Organisers must first revise and validate it to remove seismic/VSP contingency data and confirm that no hidden references or scoring assets are included. The link may require access permissions. A revised ZIP/link may replace it before kickoff.
+After the challenge allocation, each team will receive a laptop containing the relevant files, metadata, instructions and submission templates. Organisers will confirm the local folder paths and any access instructions at the event.
 
-Teams should use only the organiser-approved package released for their assigned challenge. Relevant materials will include raster well logs and metadata for Challenge 1, or curated archive documents and metadata for Challenge 2.
+The participant release must be validated before laptop imaging: exclude organiser-only ground truth, hidden questions, answer keys and scoring materials. Seismic/VSP data are retained by organisers as contingency material and are not part of the initial participant dataset.
 
-No raw Volve dataset is stored in this repository. Organisers will confirm dataset attribution, access permissions, permitted use, third-party API restrictions and final download instructions before release.
+No raw Volve dataset is stored in this repository. Teams must follow event rules on external services, data sharing and third-party APIs.
 
-See the [participant challenge brief](../challenges/CHALLENGE_BRIEF.md) for required outputs.
+See the [participant challenge brief](../challenges/CHALLENGE_BRIEF.md) for challenge requirements.
