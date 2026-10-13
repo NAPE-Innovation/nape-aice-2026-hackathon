@@ -33,12 +33,20 @@ These rules apply to all participants once the approved version is issued. The a
 Every team must submit:
 1. The completed **challenge-specific CSV** matching the supplied schema.
 2. **Working executable code, notebook or application** implementing the team's approach. **Code is mandatory for both challenges; a CSV-only submission is insufficient.**
-3. A README covering setup, dependencies, execution steps, approach, limitations, external tools/models/APIs, attribution and reproducibility.
-4. A working demonstration or presentation of the solution, including how its outputs were generated.
+3. A **ready-to-run inference pipeline** that accepts organiser-supplied unseen test inputs and produces the required challenge-specific output CSV without training or fitting. Include trained/fine-tuned model weights, fitted preprocessing components, indexes, configurations and any other runtime artefacts needed, where applicable. A model file is not mandatory if the solution uses no trained model, but a runnable inference pipeline is mandatory.
+4. A README covering setup, dependencies, execution steps, approach, limitations, external tools/models/APIs, attribution and reproducibility.
+5. A working demonstration or presentation of the solution, including how its outputs were generated.
 
 For **Legacy Well Log Digitisation**, the required output is a depth-indexed CSV using the supplied template; **LAS submission is not required**. For **Intelligent Well Archive**, the required output is an answers CSV with supporting evidence references. See the challenge brief for authoritative columns and formats.
 
 Submission destination, file/folder naming, exact deadline, demo length and permitted final changes: **[TO CONFIRM]**. All teams must receive the same instructions and deadline.
+
+### Submission freeze and hidden evaluation
+
+- All model training, fine-tuning, fitting, index construction and other preparation of learned or persisted solution artefacts must be completed **before the submission deadline**.
+- Hidden evaluation is **inference-only**. Organisers must be able to load the submitted frozen solution and run unseen test inputs without retraining, fine-tuning, refitting or rebuilding learned components.
+- For Track 1, the solution must process unseen log-image inputs and generate the required depth-indexed CSV. For Track 2, the solution must answer unseen questions against the approved archive and produce the required answers/evidence CSV; unseen documents are not automatically required.
+- The precise invocation command, input packaging, allowed runtime preprocessing, execution environment, runtime limits and any API/network access will be specified uniformly to all teams **[TO CONFIRM BEFORE RELEASE]**. Ordinary per-input inference preprocessing is allowed; training or refitting on hidden inputs is not.
 
 ## 5. AI, APIs, compute and data handling
 
