@@ -8,7 +8,7 @@ The hackathon uses selected materials from the publicly released Volve Field dat
 
 After the challenge allocation, each team will receive a laptop containing the relevant files, metadata, instructions and submission templates. Organisers will confirm the local folder paths and any access instructions at the event.
 
-The participant release must be validated before laptop imaging: exclude organiser-only ground truth, hidden questions, answer keys and scoring materials. Seismic/VSP data are retained by organisers as contingency material and are not part of the initial participant dataset.
+The participant release must be validated before laptop imaging: exclude organiser-only ground truth, hidden questions, answer keys and scoring materials.
 
 No raw Volve dataset is stored in this repository. Teams must follow event rules on external services, data sharing and third-party APIs.
 
