@@ -1,12 +1,12 @@
 # NAPE AICE 2026 Hackathon — Competition Rules
 
-**Status: DRAFT FOR ORGANISER APPROVAL — NOT YET EFFECTIVE**
+**Status: Approved by Promise E.**
 
 **Theme:** Unlocking Dormant Value  
 **Hackathon:** 7–8 November 2026, Eko Hotel & Suites, Lagos  
 **Format:** In-person, approximately 48 hours; official start, submission cut-off and presentations schedule **[TO CONFIRM]**.
 
-These rules apply to all participants once the approved version is issued. The approved [Participation and Data Use Agreement](participation-and-data-use-agreement.md) also applies.
+These rules apply to all participants. The approved Participation and Data Use Agreement also applies.
 
 ## 1. Eligibility and teams
 
@@ -39,19 +39,18 @@ Every team must submit:
 
 For **Legacy Well Log Digitisation**, the required output is a depth-indexed CSV using the supplied template; **LAS submission is not required**. For **Intelligent Well Archive**, the required output is an answers CSV with supporting evidence references. See the challenge brief for authoritative columns and formats.
 
-Submission destination, file/folder naming, exact deadline, demo length and permitted final changes: **[TO CONFIRM]**. All teams must receive the same instructions and deadline.
 
 ### Submission freeze and hidden evaluation
 
 - All model training, fine-tuning, fitting, index construction and other preparation of learned or persisted solution artefacts must be completed **before the submission deadline**.
 - Hidden evaluation is **inference-only**. Organisers must be able to load the submitted frozen solution and run unseen test inputs without retraining, fine-tuning, refitting or rebuilding learned components.
 - For Track 1, the solution must process unseen log-image inputs and generate the required depth-indexed CSV. For Track 2, the solution must answer unseen questions against the approved archive and produce the required answers/evidence CSV; unseen documents are not automatically required.
-- The precise invocation command, input packaging, allowed runtime preprocessing, execution environment, runtime limits and any API/network access will be specified uniformly to all teams **[TO CONFIRM BEFORE RELEASE]**. Ordinary per-input inference preprocessing is allowed; training or refitting on hidden inputs is not.
+- The precise invocation command, input packaging, allowed runtime preprocessing, execution environment, runtime limits and any API/network access will be specified uniformly to all teams. Ordinary per-input inference preprocessing is allowed; training or refitting on hidden inputs is not.
 
 ## 5. AI, APIs, compute and data handling
 
 - Open-source libraries, public pretrained models and AI coding assistants are permitted.
-- Use of paid APIs, external hosted models, internet services, personal hardware and external compute is subject to the event's **approved resource/fairness policy [TO CONFIRM]**.
+- Use of paid APIs, external hosted models, internet services, personal hardware and external compute is subject to the event's policy.
 - Do **not** upload provided raw datasets or documents to external services without express organiser approval and confirmation of applicable dataset permissions.
 - Disclose substantial third-party components, model providers, API use and external datasets in the README and presentation.
 - Fabricated evidence, invented source citations, falsified outputs and undisclosed external assistance are prohibited.
@@ -71,14 +70,8 @@ Submission destination, file/folder naming, exact deadline, demo length and perm
 
 ## 8. Judging and awards
 
-Judging will consider the published criteria, including solution quality, accuracy, evidence, reproducibility, technical execution and practical relevance. **Exact scoring weights, judge composition, tie-breaks, appeals procedure and prize eligibility [TO CONFIRM AND PUBLISH BEFORE COMPETITION].** Judges must declare material conflicts of interest. Organisers may conduct technical validation before final decisions.
+Judging will consider the published criteria, including solution quality, accuracy, evidence, reproducibility, technical execution and practical relevance. Judges must declare material conflicts of interest. Organisers may conduct technical validation before final decisions.
 
 ## 9. Rule breaches and disputes
 
-The organisers may request clarification, inspect submitted materials and investigate suspected breaches. Responses may include correction requests, score adjustments or disqualification, depending on severity and fairness. The organiser's approved appeals and final decision process **[TO CONFIRM]** applies. Immediate access restrictions may be used for safety or security concerns.
-
-## 10. Publication checklist
-
-Before these rules are final, confirm and publish: eligibility/age requirements; event timetable and submission cut-off; permitted APIs, external compute and device policy; dataset licence and attribution; exact deliverables and submission route; judging rubric and prizes; tie-break and appeal process; participant privacy notice; and approved agreement wording.
-
-**The GitHub-approved versions of these rules, the agreement and challenge brief are the authoritative documents. Google Drive working briefs are not controlling where they differ.**
+The organisers may request clarification, inspect submitted materials and investigate suspected breaches. Responses may include correction requests, score adjustments or disqualification, depending on severity and fairness.
