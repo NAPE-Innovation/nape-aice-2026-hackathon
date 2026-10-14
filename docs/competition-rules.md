@@ -4,7 +4,7 @@
 
 **Theme:** Unlocking Dormant Value  
 **Hackathon:** 7–8 November 2026, Eko Hotel & Suites, Lagos  
-**Format:** In-person, approximately 48 hours; official start, submission cut-off and presentations schedule **[TO CONFIRM]**.
+**Format:** In-person, approximately 48 hours.
 
 These rules apply to all participants. The approved Participation and Data Use Agreement also applies.
 
