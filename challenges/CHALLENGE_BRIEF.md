@@ -2,7 +2,7 @@
 
 **Theme:** Unlocking Dormant Value  
 **Dates:** 7–8 November 2026 | **Venue:** Eko Hotel & Suites, Lagos  
-**Duration:** 48 hours | **Status:** Draft — subject to final release approval
+**Duration:** 48 hours | **Status:** Draft — technical review pending
 
 ## Why this matters
 Decades of subsurface records contain information that can inform energy decisions, but historical well logs and technical documents are often difficult to search, analyse or integrate into modern workflows. Your mission is to transform dormant information into useful, verifiable digital assets.
@@ -32,6 +32,7 @@ Relevant log image pages/combined PDF, page registry and metadata, and a depth/c
 2. **Working solution:** reproducible code, notebook or application showing how the values were produced.
 3. **Technical README:** setup and execution steps; image preprocessing; curve identification; depth/value calibration; QC and confidence; assumptions, failure modes and limitations.
 4. **Demonstration:** show extraction on representative images, quality checks and practical use of the resulting numerical data.
+5. **Frozen inference workflow:** include a runnable entry point and all required saved model or calibration artefacts (where applicable) to process organiser-supplied unseen log images and produce the required CSV without training, fitting or recalibration against hidden evaluation targets.
 
 A strong solution will demonstrate extraction accuracy, appropriate depth registration, reproducibility and honest uncertainty reporting. Optional enhancements (batch processing, interactive QC, LAS export) cannot replace the CSV.
 
@@ -51,11 +52,18 @@ Curated archive documents, document metadata/manifest and an answers template.
 2. **Working solution:** reproducible code, notebook or application showing document processing, retrieval and/or extraction and answer generation.
 3. **Technical README:** setup and execution steps; document handling; retrieval/extraction; evidence provenance; confidence, ambiguity and unsupported-answer handling; limitations.
 4. **Demonstration:** answer representative questions and show where the evidence comes from.
+5. **Frozen inference workflow:** include a runnable entry point and all required persisted retrieval indexes, models and configurations (where applicable) to answer unseen questions against the approved archive and produce the required answers/evidence CSV without retraining, refitting or rebuilding learned components during hidden evaluation.
 
 ### Practice questions and evaluation
 An **open question set** will be provided for development and testing. The final open question set and answer-template IDs will be confirmed in the approved release. Solutions should work on **previously unseen questions**, not rely on hard-coded answers to the open examples. The evaluation procedure and final submission instructions will be communicated by organisers.
 
 A strong solution will return accurate, evidence-supported answers and recognise when the supplied archive does not justify an answer. Optional semantic search, RAG, interfaces and visualisations are welcome but not required.
+
+## Technical evaluation expectations
+
+**Challenge 1:** Solutions will be assessed for curve-value extraction quality, correct depth registration and calibration, reproducibility, and transparent QC/uncertainty handling. Evaluation will use withheld reference data; the final scoring weights and tie-break rules are specified separately in the approved judging rubric.
+
+**Challenge 2:** Solutions will be assessed for answer correctness, relevance and traceability of document evidence, handling of ambiguity or unsupported questions, and reproducibility. Unseen questions may be used against the approved archive; the final scoring weights and tie-break rules are specified separately in the approved judging rubric.
 
 ## Requirements applying to both challenges
 - Use the approved participant dataset for challenge-specific evidence.
@@ -64,6 +72,7 @@ A strong solution will return accurate, evidence-supported answers and recognise
 - Disclose external services and models used; follow final event rules on APIs and data handling.
 - Be ready to demonstrate the solution within the hackathon.
 - Do not seek access to organiser-only reference/evaluation materials.
-- The submission channel, deadline, allowed external services and final evaluation details will be confirmed in the participant guide.
+- Hidden evaluation is **inference-only**: no training, fine-tuning, refitting or rebuilding learned/persisted solution artefacts on hidden inputs. Ordinary per-input inference preprocessing is permitted. The precise command, runtime limits and test-input packaging will be supplied uniformly to teams.
+- Submission packaging, channel, deadline and execution instructions are maintained in the separate [Submission Guide](../submission/SUBMISSION_GUIDE.md). The [Competition Rules](../docs/competition-rules.md) govern permitted tools, external services, conduct and fairness. The approved judging rubric governs scores and tie-breaks.
 
 **Goal:** Unlock existing data, reveal reliable insights and demonstrate practical value for subsurface workflows.
