@@ -53,3 +53,26 @@ The test input contains a question CSV and refers to the approved archive. Outpu
 - Are data references and evidence paths valid?
 - Are credentials, organiser-only data and hidden reference files excluded?
 - Does the README accurately describe third-party components and licence obligations?
+
+## Self-validation (participant-facing)
+
+You can check both the submission package structure and your CSV without access to reference answers:
+
+```bash
+python submission/validate_submission.py --track 1 --submission /path/to/team-submission
+# Use --track 2 for archive intelligence
+```
+
+Or import the checks:
+
+```python
+from submission.validate_submission import validate_csv, validate_structure
+print(validate_csv("team-submission/outputs/predictions.csv", "1"))
+print(validate_structure("team-submission"))
+```
+
+This checks required files, CSV columns, identifiers, basic numeric fields and confidence range. It **does not** check prediction accuracy, hidden answers, inference execution or model quality. The proposed submission layout remains subject to final event runtime confirmation.
+
+## Two-stage technical evaluation
+
+**Stage 1 — open-test CSV:** organisers score the submitted CSV against the corresponding open-test reference. **Stage 2 — hidden inference:** organisers run each team's frozen inference code on unseen inputs, then score the generated CSV against separate restricted hidden references. The same track-specific metric can be used for both stages; results should remain separate until final judging weights are approved.
