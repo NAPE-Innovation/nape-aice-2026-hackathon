@@ -1,6 +1,20 @@
 # Team Submission Template
 
-Copy this folder into your team's submission and replace the example implementation.
+Copy this template into a folder named after your **registered team name**, using lowercase letters and hyphens instead of spaces (for example, `Team X` → `team-x/` or `Team Alpha` → `team-alpha/`). Replace the example implementation. The folder name is distinct from the organiser-assigned team ID.
+
+```text
+team-x/
+├── README.md
+├── requirements.txt
+├── run_inference.py
+├── src/                 # optional
+├── models/              # if applicable
+├── indexes/             # if applicable
+└── outputs/
+    └── predictions.csv
+```
+
+The final handover method is still under organiser review.
 
 ## Required
 - `run_inference.py`: accepts `--input` and `--output`, writes predictions CSV; implement your actual inference logic.
