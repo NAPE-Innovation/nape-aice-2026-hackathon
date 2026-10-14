@@ -19,7 +19,7 @@ These rules apply to all participants. The approved Participation and Data Use A
 - Two challenges are available: **Legacy Well Log Digitisation** and **Intelligent Well Archive**.
 - At the event opening, challenge allocation will take place by **witnessed lucky dip**, with three teams assigned to each challenge.
 - Teams must work on their allocated challenge using the approved, challenge-specific dataset preloaded on their supplied laptop. No participant dataset download is required.
-- The approved [Challenge Brief](../challenges/CHALLENGE_BRIEF.md) defines the task, input materials, submission schemas and challenge-specific deliverables.
+- The approved [Challenge Brief](../CHALLENGE_BRIEF.md) defines the task, input materials, submission schemas and challenge-specific deliverables.
 
 ## 3. Development window and original work
 
