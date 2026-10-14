@@ -12,6 +12,10 @@ Six finalist teams will be allocated to two challenge tracks (three per track) b
 ## Data and access
 The challenges use curated materials from the publicly released **Volve Field** dataset. The approved, challenge-specific dataset will be **preloaded onto the laptop provided to your team**. No dataset download is required. See [Data access](../docs/data-access.md) for event-day access instructions. Use only the **approved participant release** for your assigned challenge. Organiser-only references, withheld numerical ground truth and evaluation questions are not available to participants.
 
+### Dataset attribution and licensing
+
+**Source acknowledgement:** The challenge materials are curated from Equinor's publicly released **Volve Field dataset**. Equinor and the relevant Volve licence partners retain their applicable rights in the source material. See [Equinor's Volve data-sharing page](https://www.equinor.com/energy/volve-data-sharing) and [Volve data licence terms](https://cdn.equinor.com/files/h61q9gi9/global/de6532f6134b9a953f6c41bac47a0c055a3712d3.pdf?equinor-hrs-terms-and-conditions-for-licence-to-data-volve.pdf=). Equinor is not represented as sponsoring or endorsing this event. Participants must retain applicable source notices and comply with the approved event data-use agreement.
+
 ## Challenge 1 — Legacy Well Log Digitisation
 
 ### Problem
