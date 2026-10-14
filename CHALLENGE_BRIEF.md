@@ -10,7 +10,7 @@ Decades of subsurface records contain information that can inform energy decisio
 Six finalist teams will be allocated to two challenge tracks (three per track) by a witnessed random draw at the hackathon kickoff.
 
 ## Data and access
-The challenges use curated materials from the publicly released **Volve Field** dataset. The approved, challenge-specific dataset will be **preloaded onto the laptop provided to your team**. No dataset download is required. See [Data access](../docs/data-access.md) for event-day access instructions. Use only the **approved participant release** for your assigned challenge. Organiser-only references, withheld numerical ground truth and evaluation questions are not available to participants.
+The challenges use curated materials from the publicly released **Volve Field** dataset. The approved, challenge-specific dataset will be **preloaded onto the laptop provided to your team**. No dataset download is required. See [Data access](docs/data-access.md) for event-day access instructions. Use only the **approved participant release** for your assigned challenge. Organiser-only references, withheld numerical ground truth and evaluation questions are not available to participants.
 
 ### Dataset attribution and licensing
 
@@ -73,6 +73,6 @@ A strong solution will return accurate, evidence-supported answers and recognise
 - Be ready to demonstrate the solution within the hackathon.
 - Do not seek access to organiser-only reference/evaluation materials.
 - Hidden evaluation is **inference-only**: no training, fine-tuning, refitting or rebuilding learned/persisted solution artefacts on hidden inputs. Ordinary per-input inference preprocessing is permitted. The precise command, runtime limits and test-input packaging will be supplied uniformly to teams.
-- Submission packaging, channel, deadline and execution instructions are maintained in the separate [Submission Guide](../submission/SUBMISSION_GUIDE.md). The [Competition Rules](../docs/competition-rules.md) govern permitted tools, external services, conduct and fairness. The approved judging rubric governs scores and tie-breaks.
+- Submission packaging, channel, deadline and execution instructions are maintained in the separate [Submission Guide](submission/SUBMISSION_GUIDE.md). The [Competition Rules](docs/competition-rules.md) govern permitted tools, external services, conduct and fairness. The approved judging rubric governs scores and tie-breaks.
 
 **Goal:** Unlock existing data, reveal reliable insights and demonstrate practical value for subsurface workflows.
