@@ -2,7 +2,7 @@
 
 **NAPE AICE 2026 Hackathon | 7–8 November 2026 | Both tracks**
 
-This guide explains the technical workflow. The [Challenge Brief](../challenges/CHALLENGE_BRIEF.md) defines the challenges, the [Competition Rules](competition-rules.md) govern participation and permitted tools, and the [Submission Guide](../submission/SUBMISSION_GUIDE.md) defines submission expectations. Starter notebooks are **optional teaching aids, not finished solutions**.
+This guide explains the technical workflow. The [Challenge Brief](../CHALLENGE_BRIEF.md) defines the challenges, the [Competition Rules](competition-rules.md) govern participation and permitted tools, and the [Submission Guide](../submission/SUBMISSION_GUIDE.md) defines submission expectations. Starter notebooks are **optional teaching aids, not finished solutions**.
 
 ## 1. Your environment and approved data
 
