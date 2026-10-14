@@ -1,6 +1,6 @@
 # Submission Guide and Inference Contract — DRAFT
 
-**Applies to both challenge tracks.** See [Competition Rules](../docs/competition-rules.md) and the [Challenge Brief](../challenges/CHALLENGE_BRIEF.md). This guide defines the proposed common submission format; the exact command and runtime will be confirmed before release.
+**Applies to both challenge tracks.** See [Competition Rules](../docs/competition-rules.md) and the [Challenge Brief](../CHALLENGE_BRIEF.md). This guide defines the proposed common submission format; the exact command and runtime will be confirmed before release.
 
 ## Mandatory deliverables
 1. Completed challenge-specific predictions CSV using the supplied schema.
