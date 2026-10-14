@@ -14,7 +14,7 @@
 ## Proposed submission layout
 
 ```text
-team-submission/
+team-x/
 ├── README.md
 ├── requirements.txt
 ├── run_inference.py
@@ -24,6 +24,8 @@ team-submission/
 └── outputs/
     └── predictions.csv
 ```
+
+The submission root folder must match the team's registered name in lowercase, with spaces replaced by hyphens (for example, **Team X** → `team-x/`, **Team Alpha** → `team-alpha/`). Keep the organiser-assigned team ID separately for submission confirmation and scoring. Do not rename the submission folder after the final handover. This naming convention is proposed pending approval of the overall submission mechanism.
 
 ## Proposed common invocation
 
