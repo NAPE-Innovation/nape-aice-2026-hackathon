@@ -12,4 +12,4 @@ The participant release must be validated before laptop imaging: exclude organis
 
 No raw Volve dataset is stored in this repository. Teams must follow event rules on external services, data sharing and third-party APIs.
 
-See the [participant challenge brief](../challenges/CHALLENGE_BRIEF.md) for challenge requirements.
+See the [participant challenge brief](../CHALLENGE_BRIEF.md) for challenge requirements.
