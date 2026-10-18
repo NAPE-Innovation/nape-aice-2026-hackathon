@@ -31,21 +31,19 @@ These rules apply to all participants. The approved Participation and Data Use A
 ## 4. Mandatory deliverables — both challenges
 
 Every team must submit:
-1. The completed **challenge-specific CSV** matching the supplied schema.
-2. **Working executable code, notebook or application** implementing the team's approach. **Code is mandatory for both challenges; a CSV-only submission is insufficient.**
-3. A **ready-to-run inference pipeline** that accepts organiser-supplied unseen test inputs and produces the required challenge-specific output CSV without training or fitting. Include trained/fine-tuned model weights, fitted preprocessing components, indexes, configurations and any other runtime artefacts needed, where applicable. A model file is not mandatory if the solution uses no trained model, but a runnable inference pipeline is mandatory.
-4. A README covering setup, dependencies, execution steps, approach, limitations, external tools/models/APIs, attribution and reproducibility.
-5. A working demonstration or presentation of the solution, including how its outputs were generated.
+1. A completed **challenge-specific `predictions.csv`** matching the supplied template.
+2. **One or more Jupyter notebooks (`.ipynb`)** containing the submitted solution.
+3. A **`requirements.txt`** identifying the Python packages needed to run the solution.
+4. A **`README.md`** with setup instructions, input paths, steps to run the notebook and reproduce the CSV, external services, attribution, assumptions and limitations.
+5. A presentation explaining the approach and results.
 
-For **Legacy Well Log Digitisation**, the required output is a depth-indexed CSV using the supplied template; **LAS submission is not required**. For **Intelligent Well Archive**, the required output is an answers CSV with supporting evidence references. See the challenge brief for authoritative columns and formats.
+Any saved model weights, indexes or configuration needed for reproduction must also be provided or clearly documented where applicable. No separate `run_inference.py` script, Docker image, API or CI/CD setup is required. Teams are **not required to run their notebooks live** during presentations.
 
+Track 1 output: depth-indexed CSV using the published columns; LAS is optional. Track 2 output: answers CSV including evidence references. See the [Submission Guide](../submission/SUBMISSION_GUIDE.md).
 
-### Submission freeze and hidden evaluation
+### Independent technical execution
 
-- All model training, fine-tuning, fitting, index construction and other preparation of learned or persisted solution artefacts must be completed **before the submission deadline**.
-- Hidden evaluation is **inference-only**. Organisers must be able to load the submitted frozen solution and run unseen test inputs without retraining, fine-tuning, refitting or rebuilding learned components.
-- For Track 1, the solution must process unseen log-image inputs and generate the required depth-indexed CSV. For Track 2, the solution must answer unseen questions against the approved archive and produce the required answers/evidence CSV; unseen documents are not automatically required.
-- The precise invocation command, input packaging, allowed runtime preprocessing, execution environment, runtime limits and any API/network access will be specified uniformly to all teams. Ordinary per-input inference preprocessing is allowed; training or refitting on hidden inputs is not.
+After submission, the NAPE technical team will execute each team's submitted code/notebook using its documented requirements and instructions. Execution success, output validity, reproducibility and runtime will contribute to the inference/reproducibility score. Organisers will use a consistent evaluation environment and explain any execution constraints to all teams. There is **no automated hidden-test evaluation**.
 
 ## 5. AI, APIs, compute and data handling
 
@@ -60,7 +58,7 @@ For **Legacy Well Log Digitisation**, the required output is a depth-indexed CSV
 
 - Outputs should be traceable to the approved dataset. Teams should report uncertainty and limitations rather than invent unsupported answers.
 - Submitted code must reasonably reproduce the required outputs in the provided environment, with documented dependencies and execution instructions.
-- The organisers may evaluate submissions using questions or test cases not shared with teams in advance. Internal answer keys, ground truth, scoring tools and evaluation details are confidential.
+- Open-test reference answers and internal scoring tools remain confidential. Organisers may independently check whether submitted code reproduces its claimed outputs.
 
 ## 7. Mentors, conduct and fairness
 
@@ -70,7 +68,7 @@ For **Legacy Well Log Digitisation**, the required output is a depth-indexed CSV
 
 ## 8. Judging and awards
 
-Judging will consider the published criteria, including solution quality, accuracy, evidence, reproducibility, technical execution and practical relevance. Judges must declare material conflicts of interest. Organisers may conduct technical validation before final decisions.
+Final scores are allocated as **40% presentation judging, 40% open-test prediction results, and 20% organiser-run inference/reproducibility**. Technical reviewers assess whether the submitted solution executes successfully, produces expected outputs, follows documented instructions and completes within agreed runtime criteria. Judges must declare material conflicts of interest. Organisers may conduct validation before final decisions.
 
 ## 9. Rule breaches and disputes
 
