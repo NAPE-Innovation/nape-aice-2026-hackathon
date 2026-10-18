@@ -1,80 +1,51 @@
-# Submission Guide and Inference Contract — DRAFT
+# Submission Guide — NAPE AICE 2026
 
-**Applies to both challenge tracks.** See [Competition Rules](../docs/competition-rules.md) and the [Challenge Brief](../CHALLENGE_BRIEF.md). This guide defines the proposed common submission format; the exact command and runtime will be confirmed before release.
+This guide applies to both challenge tracks. We have kept the submission format deliberately simple for a student hackathon.
 
-## Mandatory deliverables
-1. Completed challenge-specific predictions CSV using the supplied schema.
-2. Working source code/notebook/application **and a runnable inference entry point**.
-3. Frozen trained model weights, fitted preprocessing, embeddings/indexes and configuration **where applicable**.
-4. README with setup, run command, dependencies, data paths, architecture, methodology, licences, limitations and external services.
-5. Demonstration/presentation.
+## Required files
 
-**A CSV alone is insufficient. A model file alone is insufficient.** Teams that do not train a model still submit an inference-ready pipeline.
-
-## Proposed submission layout
+Each team submits one folder containing:
 
 ```text
-team-x/
-├── README.md
-├── requirements.txt
-├── run_inference.py
-├── src/                     # optional
-├── models/                  # weights/fitted artefacts if applicable
-├── indexes/                 # persisted retrieval indexes if applicable
-└── outputs/
-    └── predictions.csv
+submission/
+├── solution.ipynb       # one or more notebooks; filename is flexible
+├── predictions.csv      # predictions using the supplied track-specific template
+├── requirements.txt     # Python dependencies
+└── README.md            # step-by-step instructions for organisers
 ```
 
-The submission root folder must match the team's registered name in lowercase, with spaces replaced by hyphens (for example, **Team X** → `team-x/`, **Team Alpha** → `team-alpha/`). Keep the organiser-assigned team ID separately for submission confirmation and scoring. Do not rename the submission folder after the final handover. This naming convention is proposed pending approval of the overall submission mechanism.
+Additional saved model weights, configuration or retrieval indexes may be included **if needed** to reproduce your solution. Teams are not required to build an API, Docker image, CI/CD pipeline or separate `run_inference.py` script.
 
-## Proposed common invocation
+The README should explain how to prepare the environment, where the input data and any model artefacts belong, which notebook cells to run and in what order, how to generate `predictions.csv`, external services required (if any), and relevant assumptions or limitations. Avoid undocumented interactive steps and never include API keys.
+
+## Track-specific prediction CSVs
+
+- **Track 1 — Legacy Well Log Digitisation:** `page_id,well,depth_m,curve,value,confidence,notes`
+- **Track 2 — Intelligent Well Archive:** `question_id,answer,evidence,confidence,notes`
+
+Use the provided prediction template for your allocated track. Preserve requested identifiers. The organisers will announce the final submission deadline and handover method.
+
+## How the submission is scored
+
+| Component | Weight |
+| --- | ---: |
+| Presentation judging | 40% |
+| Open-test result, based on `predictions.csv` | 40% |
+| Organiser-run inference / reproducibility | 20% |
+
+Open-test predictions are scored by the NAPE team against the approved reference answers. After submission, **NAPE technical reviewers independently run your submitted notebook/code**, following your README and requirements. They assess whether the solution runs without errors, produces valid outputs, can be reproduced and how long it takes under an agreed execution environment. Teams do **not** need to execute their notebooks live during the presentation. There is **no automated hidden-test scoring**.
+
+For fairness, organiser-run execution uses consistent hardware/resources and documented timing rules across teams. Reference answers are never supplied in the public submission package.
+
+## Check your submission
+
+From the hackathon repository, run:
 
 ```bash
-python run_inference.py --input /path/to/test_input --output /path/to/predictions.csv
+python submission/validate_submission.py --track 1 --submission /path/to/submission
+# Or use --track 2 for Archive Intelligence
 ```
 
-The `--input` path may point to a directory or CSV according to the track. The command must write the CSV at `--output`, return a nonzero exit code on failure, and not require interactive prompts. The supplied [Python template](template/run_inference.py) illustrates the command-line contract; it deliberately does not generate predictions.
+The check confirms required files, notebook structure and basic prediction CSV integrity. It does **not** run the notebook or score prediction quality.
 
-### Track 1
-The test input contains new log images and target-depth/curve requests. Output columns: `page_id,well,depth_m,curve,value,confidence,notes`. Preserve requested identifiers. LAS is not required.
-
-### Track 2
-The test input contains a question CSV and refers to the approved archive. Output columns: `question_id,answer,evidence,confidence,notes`. Evidence must reference the supporting archive documents. Hidden questions may be unseen even when the documents are familiar.
-
-## Freeze and evaluation
-- **Complete all training, fine-tuning, fitting and index construction before submission.**
-- Organisers will run the submitted frozen solution on unseen inputs. No training, refitting, index rebuilding or retrieval of hidden answers is allowed during evaluation.
-- Ordinary deterministic preprocessing of each unseen input is permitted.
-- The organisers may verify execution independently. Do not rely on team members manually editing predictions during evaluation.
-- The permitted network/API policy, hardware/runtime limits, input folder schema, scoring tolerances and exact entry-point convention **remain to be confirmed**.
-
-## Pre-submit checks
-- Can the command run from a clean shell with documented dependencies?
-- Are all required model and index artefacts present and loadable?
-- Does the CSV exactly match the challenge-specific schema?
-- Are data references and evidence paths valid?
-- Are credentials, organiser-only data and hidden reference files excluded?
-- Does the README accurately describe third-party components and licence obligations?
-
-## Self-validation (participant-facing)
-
-You can check both the submission package structure and your CSV without access to reference answers:
-
-```bash
-python submission/validate_submission.py --track 1 --submission /path/to/team-submission
-# Use --track 2 for archive intelligence
-```
-
-Or import the checks:
-
-```python
-from submission.validate_submission import validate_csv, validate_structure
-print(validate_csv("team-submission/outputs/predictions.csv", "1"))
-print(validate_structure("team-submission"))
-```
-
-This checks required files, CSV columns, identifiers, basic numeric fields and confidence range. It **does not** check prediction accuracy, hidden answers, inference execution or model quality. The proposed submission layout remains subject to final event runtime confirmation.
-
-## Two-stage technical evaluation
-
-**Stage 1 — open-test CSV:** organisers score the submitted CSV against the corresponding open-test reference. **Stage 2 — hidden inference:** organisers run each team's frozen inference code on unseen inputs, then score the generated CSV against separate restricted hidden references. The same track-specific metric can be used for both stages; results should remain separate until final judging weights are approved.
+See [Competition Rules](../docs/competition-rules.md) and [Participant Technical Guide](../docs/participant-technical-guide.md).
