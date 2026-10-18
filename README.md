@@ -15,7 +15,7 @@ This repository contains participant resources for six finalist teams. Challenge
 
 ## Submission at a glance
 
-Submit **notebook(s) + `predictions.csv` + `requirements.txt` + `README.md`** with clear instructions to reproduce your output. No Docker, CI/CD configuration, API or separate inference script is required. The NAPE technical team will run your submitted code independently after submission; no live execution during presentations is mandatory.
+In **your assigned team GitHub repository**, create a `submission/` folder at the repository root. Put **notebook(s) + `predictions.csv` + `requirements.txt` + `README.md`** inside it, with clear instructions to reproduce your output. The open-test evaluator reads **`submission/predictions.csv`**. The organisers will record your final commit SHA at the deadline. No Docker, CI/CD configuration, API or separate inference script is required. The NAPE technical team will run your submitted code independently after submission; no live execution during presentations is mandatory.
 
 **Final scoring:** presentation **40%**, open-test prediction score **40%**, organiser-run inference/reproducibility **20%**. No automated hidden-test scoring.
 
