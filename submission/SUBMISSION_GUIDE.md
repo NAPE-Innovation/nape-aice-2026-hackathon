@@ -4,7 +4,7 @@ This guide applies to both challenge tracks. We have kept the submission format 
 
 ## Required files
 
-Each team submits one folder containing:
+Each team must create a **`submission/` directory at the root of their assigned team GitHub repository**. Do not place final deliverables directly in the repository root. The required layout is:
 
 ```text
 submission/
@@ -23,7 +23,7 @@ The README should explain how to prepare the environment, where the input data a
 - **Track 1 — Legacy Well Log Digitisation:** `page_id,well,depth_m,curve,value,confidence,notes`
 - **Track 2 — Intelligent Well Archive:** `question_id,answer,evidence,confidence,notes`
 
-Use the provided prediction template for your allocated track. Preserve requested identifiers. The organisers will announce the final submission deadline and handover method.
+Use the provided prediction template for your allocated track. Preserve requested identifiers. The required prediction path is **`submission/predictions.csv`**. Keep all final deliverables inside `submission/`; supporting artefacts can be stored there in subfolders. Teams may use the repository root for drafts or experiments, but only the final `submission/` directory (and explicitly documented approved dependencies) will be reviewed. The organisers will announce the submission deadline. At the deadline, NAPE will record the team repository's commit SHA so the scored CSV and independently executed notebook come from the same version.
 
 ## How the submission is scored
 
