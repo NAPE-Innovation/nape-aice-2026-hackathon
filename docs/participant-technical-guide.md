@@ -1,64 +1,53 @@
-# Participant Technical Guide — Review Draft
+# Participant Technical Guide
 
 **NAPE AICE 2026 Hackathon | 7–8 November 2026 | Both tracks**
 
-This guide explains the technical workflow. The [Challenge Brief](../CHALLENGE_BRIEF.md) defines the challenges, the [Competition Rules](competition-rules.md) govern participation and permitted tools, and the [Submission Guide](../submission/SUBMISSION_GUIDE.md) defines submission expectations. Starter notebooks are **optional teaching aids, not finished solutions**.
+The [Challenge Brief](../CHALLENGE_BRIEF.md) defines the tasks and prediction formats. The [Submission Guide](../submission/SUBMISSION_GUIDE.md) explains how to submit. Starter notebooks are optional teaching aids, not finished solutions.
 
-## 1. Your environment and approved data
+## 1. Set up your environment
 
-- Use your assigned track's **approved participant dataset preloaded on the organiser-provided team laptop**. No download of the raw dataset is required.
-- Locate the dataset using the event-day path supplied by technical support. Example paths in notebooks are placeholders; do not assume the actual directory structure is identical.
-- Check the manifest, available inputs and template before processing. Do not access organiser-only references, hidden questions or withheld ground truth.
-- Do not upload raw challenge data or documents to hosted AI services, personal storage or external APIs unless the organisers explicitly approve that processing and confirm dataset permissions.
-- Do not commit raw data, access credentials or secrets to repositories.
+Use the approved track-specific data provided on the organiser-supplied team laptop. The organisers will explain the event-day data paths. Inspect your track's input manifest and CSV template. Never upload restricted data to unauthorised external services, and never include credentials or supplied raw datasets in your code submission.
 
-## 2. Before you build
+You may use Python packages, pretrained models and approved APIs in accordance with the [Competition Rules](competition-rules.md). List dependencies in `requirements.txt` and disclose relevant third-party services.
 
-1. Confirm your track, dataset path and the files listed in the supplied manifest.
-2. Inspect the required CSV template and preserve the exact column names and requested identifiers.
-3. Check Python, installed dependencies, available disk space and whether approved network/API access is working.
-4. Run the optional track notebook to inspect sample inputs. Missing paths should be resolved with technical support; do not silently invent input data.
-5. Start with a minimal reproducible workflow and document assumptions and limitations.
+## 2. Build your solution
 
-## 3. Track 1 — Legacy Well Log Digitisation
+You can implement your approach in one or more **Jupyter notebooks**, including preprocessing, extraction, model training, retrieval, generation and prediction as appropriate. You do not have to package your code as a production application or write a separate inference command.
 
-**Inputs:** approved log images/PDFs, page registry/metadata and target-depth/curve template. [Starter notebook](../starter-kits/track-1/log_digitisation_starter.ipynb).
+**Track 1 — Legacy Well Log Digitisation:** use the approved log images/PDFs and metadata to produce `page_id,well,depth_m,curve,value,confidence,notes`. [Track 1 starter notebook](../starter-kits/track-1/log_digitisation_starter.ipynb).
 
-**Required output columns:** `page_id,well,depth_m,curve,value,confidence,notes`.
+**Track 2 — Intelligent Well Archive:** use the approved archive and open questions to produce `question_id,answer,evidence,confidence,notes`. Evidence should identify supporting archive documents. [Track 2 starter notebook](../starter-kits/track-2/archive_intelligence_starter.ipynb).
 
-Build image/page identification, depth and curve calibration, extraction, QC and uncertainty handling. The starter notebook only previews inputs and checks the output contract; it does **not** implement OCR, calibration or curve extraction. Preserve target identifiers and row coverage. LAS is optional, not a substitute for the CSV.
+The starter notebooks demonstrate techniques or input inspection but are not complete competition submissions.
 
-## 4. Track 2 — Intelligent Well Archive
+## 3. Make your work reproducible
 
-**Inputs:** approved archive documents, document manifest and open questions/answer template. [Starter notebook](../starter-kits/track-2/archive_intelligence_starter.ipynb).
+Before submitting, restart the notebook kernel and, where possible, run the notebook cells in order. Include any required model files, fitted preprocessing, saved indexes or configuration when applicable. Document the exact steps to get from the approved input data to `predictions.csv`; clearly state whether training or index preparation must be performed as part of those steps.
 
-**Required output columns:** `question_id,answer,evidence,confidence,notes`.
+Provide a `README.md` with setup and run instructions, input paths, package versions, expected output location, runtime assumptions, external APIs or licences, methodology and limitations. Include `requirements.txt`. Never include credentials. If your solution depends on network services, disclose that so organisers can verify whether they are permitted and available.
 
-Build document parsing, retrieval or extraction, answer generation and evidence tracing. Cite approved source paths and abstain where the archive does not support an answer. The starter notebook demonstrates local inspection and a simple keyword-search baseline; it does **not** provide a complete PDF pipeline or answer-generation system. Hidden evaluation may use unseen questions against the approved archive.
+## 4. Prepare the submission
 
-## 5. Freeze your solution for unseen-input evaluation
+Include:
+1. Your solution notebook(s) (`.ipynb`).
+2. Completed `predictions.csv` using the provided template.
+3. `requirements.txt`.
+4. `README.md` describing how the NAPE technical team can reproduce your output.
 
-- Build, train, fine-tune, fit, calibrate and create persisted retrieval indexes **during the hackathon, before submission**.
-- Save model weights, fitted transformers, indexes, calibration settings and other required artefacts, where applicable.
-- Submit a non-interactive runnable inference entry point that loads these frozen artefacts and produces the track-specific CSV for unseen inputs.
-- Hidden evaluation is **inference-only**: no retraining, refitting or rebuilding learned/persisted artefacts on hidden inputs. Ordinary per-input preprocessing is allowed.
-- A CSV-only submission is insufficient. A trained model file is not mandatory if no model is trained, but a runnable inference workflow is mandatory.
-- The common proposed command is `python run_inference.py --input <test_input> --output <predictions.csv>`. Follow the final [Submission Guide](../submission/SUBMISSION_GUIDE.md) if this convention is revised.
+Additional model or index files are optional if relevant. No Docker image, API, CI/CD project or `run_inference.py` is required.
 
-## 6. Pre-submission checks
+Validate the package with:
+```bash
+python submission/validate_submission.py --track 1 --submission /path/to/submission
+```
+Use `--track 2` if assigned Archive Intelligence. This check does not execute your notebook or measure solution accuracy.
 
-- Output has the exact track-specific headers, requested identifiers and expected row coverage.
-- Evidence references (Track 2) point to approved archive sources; unsupported claims are not fabricated.
-- Confidence values and missing/uncertain outputs are documented consistently.
-- A fresh process can load saved artefacts and produce predictions without interactive notebook state.
-- Dependencies, input paths, runtime assumptions, licences, external tools and APIs are documented in the README.
-- No credentials, raw supplied data or organiser-only material are bundled in the submission.
-- A team member can explain and demonstrate the workflow and limitations.
+## 5. Judging and technical review
 
-## 7. Support and release-day confirmations
+**Presentation judging (40%):** teams present and explain their solution; live notebook execution is not mandatory.
 
-Report missing data, corrupt files, environment problems or suspected data exposure promptly to the event technical helpdesk. Material clarifications will be shared with all teams.
+**Open-test score (40%):** organisers score the submitted prediction CSV against the approved reference.
 
-**Pending organiser confirmation before participant release:** actual laptop specifications and Python version; installed packages; data root/mount paths; permitted external API/network and compute policy; available credentials and quotas; final inference command and input packaging; runtime limits; submission deadline/channel; technical support contact.
+**Inference / reproducibility (20%):** after submission, NAPE reviewers execute the team's submitted notebook/code independently using its requirements and instructions, then assess success, output validity, reproducibility and execution time using consistent resources and timing rules. No automated hidden-test scoring is used.
 
-**Note:** The notebooks intentionally do not generate final predictions. Teams are responsible for their own solutions and runnable inference pipelines.
+Report missing data, environment issues or unclear instructions to the event technical support team. Submission deadline and exact handover details will be communicated to all teams.
