@@ -1,5 +1,9 @@
-# Submission guide — DRAFT
+# Submission
 
-Each team will submit one solution for its assigned challenge. The final deadline, required formats and upload mechanism will be announced before the event.
+Please follow the [Submission Guide](SUBMISSION_GUIDE.md).
 
-Proposed package: `README.md`, `requirements.txt`, source code, reproducible run instructions, challenge-specific machine-readable output, and a short presentation. Disclose third-party code, models, datasets and APIs.
+**Required:** Jupyter notebook(s), `predictions.csv`, `requirements.txt` and `README.md` with clear instructions for independently running the notebook and reproducing its output.
+
+**Scoring:** presentation 40%, open-test predictions 40%, organiser-run execution/reproducibility 20%. The NAPE technical team runs submitted code separately; no live notebook execution or automated hidden test is required.
+
+The organisers will confirm the submission deadline and handover method.
