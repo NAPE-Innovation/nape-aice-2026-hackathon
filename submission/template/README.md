@@ -1,26 +1,19 @@
-# Team Submission Template
+# Student Submission Template
 
-Copy this template into a folder named after your **registered team name**, using lowercase letters and hyphens instead of spaces (for example, `Team X` → `team-x/` or `Team Alpha` → `team-alpha/`). Replace the example implementation. The folder name is distinct from the organiser-assigned team ID.
+Make a copy of this starter folder for your team's work. The required structure is:
 
 ```text
-team-x/
-├── README.md
-├── requirements.txt
-├── run_inference.py
-├── src/                 # optional
-├── models/              # if applicable
-├── indexes/             # if applicable
-└── outputs/
-    └── predictions.csv
+submission/
+├── solution.ipynb        # rename if you prefer
+├── predictions.csv       # your completed predictions
+├── requirements.txt      # dependencies
+└── README.md             # setup and running instructions
 ```
 
-The final handover method is still under organiser review.
+Use the track-specific prediction CSV template available under `outputs/` in this hackathon repository as a starting point. Copy/rename it to `predictions.csv` in your submission folder before handover.
 
-## Required
-- `run_inference.py`: accepts `--input` and `--output`, writes predictions CSV; implement your actual inference logic.
-- `requirements.txt`: pin required Python packages.
-- `models/` and `indexes/`: include frozen artefacts if your solution needs them.
-- `outputs/predictions.csv`: completed challenge-specific output.
-- `README.md`: explain how organisers can run the solution without retraining.
+In your submission's README, explain how NAPE reviewers can install requirements, access the input dataset, run the notebook from the beginning and regenerate the predictions. Include any necessary model/index files or instructions for accessing approved services. Do not include secrets.
 
-See [Submission Guide](../SUBMISSION_GUIDE.md). The included script is **an interface stub, not a working model or baseline**. Do not submit it unchanged.
+A separate `run_inference.py`, API, Docker image or CI/CD configuration is **not required**. NAPE will run your code after submission and assess reproducibility as part of the 20% inference score.
+
+See [Submission Guide](../SUBMISSION_GUIDE.md).
