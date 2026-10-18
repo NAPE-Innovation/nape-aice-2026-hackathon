@@ -32,7 +32,7 @@ Relevant log image pages/combined PDF, page registry and metadata, and a depth/c
 2. **Working solution:** reproducible code, notebook or application showing how the values were produced.
 3. **Technical README:** setup and execution steps; image preprocessing; curve identification; depth/value calibration; QC and confidence; assumptions, failure modes and limitations.
 4. **Demonstration:** show extraction on representative images, quality checks and practical use of the resulting numerical data.
-5. **Frozen inference workflow:** include a runnable entry point and all required saved model or calibration artefacts (where applicable) to process organiser-supplied unseen log images and produce the required CSV without training, fitting or recalibration against hidden evaluation targets.
+5. **Reproducible notebook:** include any required model or calibration artefacts (where applicable), `requirements.txt`, and clear instructions so NAPE reviewers can independently run the submitted notebook and regenerate the CSV.
 
 A strong solution will demonstrate extraction accuracy, appropriate depth registration, reproducibility and honest uncertainty reporting. Optional enhancements (batch processing, interactive QC, LAS export) cannot replace the CSV.
 
@@ -52,27 +52,35 @@ Curated archive documents, document metadata/manifest and an answers template.
 2. **Working solution:** reproducible code, notebook or application showing document processing, retrieval and/or extraction and answer generation.
 3. **Technical README:** setup and execution steps; document handling; retrieval/extraction; evidence provenance; confidence, ambiguity and unsupported-answer handling; limitations.
 4. **Demonstration:** answer representative questions and show where the evidence comes from.
-5. **Frozen inference workflow:** include a runnable entry point and all required persisted retrieval indexes, models and configurations (where applicable) to answer unseen questions against the approved archive and produce the required answers/evidence CSV without retraining, refitting or rebuilding learned components during hidden evaluation.
+5. **Reproducible notebook:** include any required saved indexes, models and configurations (where applicable), `requirements.txt`, and clear instructions so NAPE reviewers can independently run the submitted notebook and regenerate the CSV.
 
 ### Practice questions and evaluation
-An **open question set** will be provided for development and testing. The final open question set and answer-template IDs will be confirmed in the approved release. Solutions should work on **previously unseen questions**, not rely on hard-coded answers to the open examples. The evaluation procedure and final submission instructions will be communicated by organisers.
+An **open question set** will be provided for development and testing. The final open question set and answer-template IDs will be confirmed in the approved release. Solutions should derive answers from the archive rather than relying on hard-coded answers. The evaluation procedure and final submission instructions will be communicated by organisers.
 
 A strong solution will return accurate, evidence-supported answers and recognise when the supplied archive does not justify an answer. Optional semantic search, RAG, interfaces and visualisations are welcome but not required.
 
 ## Technical evaluation expectations
 
-**Challenge 1:** Solutions will be assessed for curve-value extraction quality, correct depth registration and calibration, reproducibility, and transparent QC/uncertainty handling. Evaluation will use withheld reference data; the final scoring weights and tie-break rules are specified separately in the approved judging rubric.
+**Challenge 1:** Solutions will be assessed for curve-value extraction quality, correct depth registration and calibration, reproducibility, and transparent QC/uncertainty handling. Submitted open-test predictions will be scored against organiser-held reference answers; additional judging is described below.
 
-**Challenge 2:** Solutions will be assessed for answer correctness, relevance and traceability of document evidence, handling of ambiguity or unsupported questions, and reproducibility. Unseen questions may be used against the approved archive; the final scoring weights and tie-break rules are specified separately in the approved judging rubric.
+**Challenge 2:** Solutions will be assessed for answer correctness, relevance and traceability of document evidence, handling of ambiguity or unsupported questions, and reproducibility. Submitted open-test answers will be scored against organiser-held reference answers; additional judging is described below.
+
+## Final scoring
+
+- **Presentation judging:** 40%.
+- **Open-test CSV accuracy/quality:** 40%.
+- **Organiser-run inference and reproducibility:** 20% (execution success, valid output, reproducibility, runtime).
+
+Teams submit notebook(s), `predictions.csv`, `requirements.txt`, and a `README.md`. A separate inference script, API, Docker image and CI/CD setup are not required.
 
 ## Requirements applying to both challenges
 - Use the approved participant dataset for challenge-specific evidence.
 - Submit the required CSV **and** a working, explainable solution; a CSV alone is insufficient.
 - Provide source files, dependencies, run instructions, methodology, assumptions and limitations.
 - Disclose external services and models used; follow final event rules on APIs and data handling.
-- Be ready to demonstrate the solution within the hackathon.
+- Present and explain the solution during judging; live notebook execution is not required.
 - Do not seek access to organiser-only reference/evaluation materials.
-- Hidden evaluation is **inference-only**: no training, fine-tuning, refitting or rebuilding learned/persisted solution artefacts on hidden inputs. Ordinary per-input inference preprocessing is permitted. The precise command, runtime limits and test-input packaging will be supplied uniformly to teams.
+- NAPE technical reviewers will independently execute the submitted notebook/code after handover using the supplied instructions and consistent resources. There is no automated hidden-test scoring.
 - Submission packaging, channel, deadline and execution instructions are maintained in the separate [Submission Guide](submission/SUBMISSION_GUIDE.md). The [Competition Rules](docs/competition-rules.md) govern permitted tools, external services, conduct and fairness. The approved judging rubric governs scores and tie-breaks.
 
 **Goal:** Unlock existing data, reveal reliable insights and demonstrate practical value for subsurface workflows.
