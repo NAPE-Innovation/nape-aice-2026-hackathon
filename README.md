@@ -4,14 +4,14 @@
 **Dates:** 7–8 November 2026  
 **Venue:** Eko Hotel & Suites, Lagos, Nigeria
 
-This repository contains participant resources for six finalist teams. Challenge allocation takes place by witnessed lucky dip at kickoff, with three teams on each track. Approved challenge-specific Volve materials will be provided on team laptops at the event; raw challenge data is not committed here.
+This repository contains participant resources for six finalist teams. Challenge allocation takes place by witnessed lucky dip at kickoff, with three teams on each track. Approved challenge-specific Volve datasets are available under `data/track_1/` and `data/track_2/`. Teams may also receive preloaded copies if announced by the organisers.
 
 ## Start here
 
 1. Read the [Challenge Brief](CHALLENGE_BRIEF.md) for both challenge tracks.
 2. Review the [Competition Rules](docs/competition-rules.md) and [Data Access Guide](docs/data-access.md).
 3. Read the [Participant Technical Guide](docs/participant-technical-guide.md). Optional starter notebooks are available for [Track 1](starter-kits/track-1/log_digitisation_starter.ipynb) and [Track 2](starter-kits/track-2/archive_intelligence_starter.ipynb).
-4. Follow the [Submission Guide](submission/SUBMISSION_GUIDE.md) and [Submission Template](submission/template/README.md).
+4. Follow the [GitHub Setup and Team Submission Guide](docs/github-setup-and-submission.md) to clone the repositories, validate your files and submit to your assigned private team repository.\n5. Follow the [Submission Guide](submission/SUBMISSION_GUIDE.md) and [Submission Template](submission/template/README.md).
 
 ## Submission at a glance
 
@@ -27,4 +27,4 @@ In **your assigned team GitHub repository**, create a `submission/` folder at th
 - `submission/` — submission format, validator and prediction templates
 - `evaluation/` — public explanation of the evaluation approach
 
-**To be communicated:** final submission deadline and handover method, data paths, available compute and network/API policy. Do not commit supplied raw datasets, confidential reference answers, private materials or credentials.
+**To be communicated:** final submission deadline, available compute and network/API policy. Do not commit supplied raw datasets, confidential reference answers, private materials or credentials.

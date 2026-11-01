@@ -20,10 +20,10 @@ The README should explain how to prepare the environment, where the input data a
 
 ## Track-specific prediction CSVs
 
-- **Track 1 — Legacy Well Log Digitisation:** `page_id,well,depth_m,curve,value,confidence,notes`
-- **Track 2 — Intelligent Well Archive:** `question_id,answer,evidence,confidence,notes`
+- **Track 1 — Legacy Well Log Digitisation:** `page_id,well,depth_m,curve,value,confidence`
+- **Track 2 — Intelligent Well Archive:** `question_id,answer,evidence,confidence`
 
-Use the provided prediction template for your allocated track. Preserve requested identifiers. The required prediction path is **`submission/predictions.csv`**. Keep all final deliverables inside `submission/`; supporting artefacts can be stored there in subfolders. Teams may use the repository root for drafts or experiments, but only the final `submission/` directory (and explicitly documented approved dependencies) will be reviewed. The organisers will announce the submission deadline. At the deadline, NAPE will record the team repository's commit SHA so the scored CSV and independently executed notebook come from the same version.
+Use the provided prediction template for your allocated track. Preserve requested identifiers. The required prediction path is **`submission/predictions.csv`**. Keep all final deliverables inside `submission/`; supporting artefacts can be stored there in subfolders. Teams may use the repository root for drafts or experiments, but only the final `submission/` directory (and explicitly documented approved dependencies) will be reviewed. The organisers will announce the submission deadline. Your assigned private team repository's `main` branch is the official submission; no separate email or Drive upload is required unless the organisers announce a contingency. At the deadline, NAPE will record the team repository's commit SHA so the scored CSV and independently executed notebook come from the same version.
 
 ## How the submission is scored
 
@@ -37,7 +37,7 @@ Open-test predictions are scored by the NAPE team against the approved reference
 
 For fairness, organiser-run execution uses consistent hardware/resources and documented timing rules across teams. Reference answers are never supplied in the public submission package.
 
-## Check your submission
+## Check your submission\n\nFor step-by-step cloning, team repository setup and a complete validator example, see the [GitHub Setup and Team Submission Guide](../docs/github-setup-and-submission.md).
 
 From the hackathon repository, run:
 
