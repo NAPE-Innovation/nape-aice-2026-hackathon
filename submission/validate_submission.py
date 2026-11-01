@@ -6,8 +6,8 @@ import math
 from pathlib import Path
 
 HEADERS = {
-    "1": ("page_id", "well", "depth_m", "curve", "value", "confidence", "notes"),
-    "2": ("question_id", "answer", "evidence", "confidence", "notes"),
+    "1": ("page_id", "well", "depth_m", "curve", "value", "confidence"),
+    "2": ("question_id", "answer", "evidence", "confidence"),
 }
 
 def validate_structure(folder):
