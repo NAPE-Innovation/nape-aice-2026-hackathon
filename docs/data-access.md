@@ -1,15 +1,13 @@
-# Volve dataset access — DRAFT
+# Dataset Access — NAPE AICE 2026
 
-The hackathon uses selected materials from the publicly released Volve Field dataset.
+Approved challenge-specific Volve materials are available in this repository:
 
-## Dataset delivery at the event
+- [Track 1 data](../data/track_1/) and [Track 1 starter notebook](../starter-kits/track-1/log_digitisation_starter.ipynb)
+- [Track 2 data](../data/track_2/) and [Track 2 starter notebook](../starter-kits/track-2/archive_intelligence_starter.ipynb)
+- [Challenge Brief](../CHALLENGE_BRIEF.md) and [GitHub Setup Guide](github-setup-and-submission.md)
 
-**Participants do not need to download the challenge dataset.** Organisers will preload the approved, challenge-specific dataset onto the laptops before handing them to teams at kickoff.
+Clone the shared repository following the GitHub Setup Guide. The organisers may also provide approved data on event laptops. Starter notebooks locate `data/track_1` or `data/track_2` relative to the current working directory; if using another location, adjust `DATA_ROOT` in the notebook.
 
-After the challenge allocation, each team will receive a laptop containing the relevant files, metadata, instructions and submission templates. Organisers will confirm the local folder paths and any access instructions at the event.
+Use only materials approved for your allocated track. Do **not** commit supplied raw datasets to your team's private submission repository or upload them to unauthorised external services. Keep reference answers, organiser evaluation materials and credentials out of submissions. Follow the [Competition Rules](competition-rules.md), the Volve licence included in this repository and the event's API/data-sharing instructions.
 
-The participant release must be validated before laptop imaging: exclude organiser-only ground truth, hidden questions, answer keys and scoring materials.
-
-No raw Volve dataset is stored in this repository. Teams must follow event rules on external services, data sharing and third-party APIs.
-
-See the [participant challenge brief](../CHALLENGE_BRIEF.md) for challenge requirements.
+Your final solution belongs in your assigned private team repository. See the [Submission Guide](submission-guide.md).
