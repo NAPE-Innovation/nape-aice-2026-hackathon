@@ -6,9 +6,11 @@ __pycache__/
 !.env.example
 *.pyc
 .DS_Store
-/data/
-/datasets/
+# /data/
+# /datasets/
 *.las
 *.segy
 *.sgy
 *.zip
+/hello.ipynb
+/sanitize.py

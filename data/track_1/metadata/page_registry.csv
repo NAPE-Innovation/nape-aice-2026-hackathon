@@ -1,0 +1,19 @@
+page_id,page_number,image_file,pdf_file,well,depth_top_m,depth_base_m,curves,curve_units,difficulty
+VOLVE_T1_01_01,1,log_images/VOLVE_T1_01_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1,2769.7,3006.0,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,clean
+VOLVE_T1_01_02,2,log_images/VOLVE_T1_01_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1,3174.8,3411.0,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
+VOLVE_T1_02_01,3,log_images/VOLVE_T1_02_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1 A,2778.0,3026.2,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,difficult
+VOLVE_T1_02_02,4,log_images/VOLVE_T1_02_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1 A,3203.4,3451.5,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
+VOLVE_T1_03_01,5,log_images/VOLVE_T1_03_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1 B,3154.9,3374.9,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,clean
+VOLVE_T1_03_02,6,log_images/VOLVE_T1_03_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1 B,3293.6,3415.0,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
+VOLVE_T1_04_01,7,log_images/VOLVE_T1_04_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1 C,3223.3,3461.5,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,difficult
+VOLVE_T1_04_02,8,log_images/VOLVE_T1_04_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-1 C,3631.7,3869.9,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
+VOLVE_T1_05_01,9,log_images/VOLVE_T1_05_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-11 A,2767.6,3041.0,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,clean
+VOLVE_T1_05_02,10,log_images/VOLVE_T1_05_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-11 A,3236.3,3509.7,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
+VOLVE_T1_06_01,11,log_images/VOLVE_T1_06_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-11 B,3452.3,3816.6,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,difficult
+VOLVE_T1_06_02,12,log_images/VOLVE_T1_06_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-11 B,4076.8,4441.2,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
+VOLVE_T1_07_01,13,log_images/VOLVE_T1_07_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-11 T2,2898.8,3360.2,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,clean
+VOLVE_T1_07_02,14,log_images/VOLVE_T1_07_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-11 T2,3689.8,4151.2,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
+VOLVE_T1_08_01,15,log_images/VOLVE_T1_08_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-12,1174.8,1694.8,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v_decimal,difficult
+VOLVE_T1_08_02,16,log_images/VOLVE_T1_08_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-12,2300.6,2820.6,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v_decimal,moderate
+VOLVE_T1_09_01,17,log_images/VOLVE_T1_09_01.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-15 D,3524.8,3844.5,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,clean
+VOLVE_T1_09_02,18,log_images/VOLVE_T1_09_02.png,log_pdf/Log_Digitization_Set.pdf,15_9-F-15 D,4072.8,4392.4,GR;RT;RHOB;NPHI,GR:API;RT:ohm.m;RHOB:g/cm3;NPHI:v/v,moderate
