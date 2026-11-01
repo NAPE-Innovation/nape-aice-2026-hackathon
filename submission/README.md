@@ -1,6 +1,6 @@
 # Submission
 
-Please follow the [Submission Guide](SUBMISSION_GUIDE.md).
+Please follow the [Submission Guide](../docs/submission-guide.md).
 
 **Required:** Jupyter notebook(s), `predictions.csv`, `requirements.txt` and `README.md` with clear instructions for independently running the notebook and reproducing its output.
 
