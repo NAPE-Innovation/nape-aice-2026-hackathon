@@ -10,6 +10,6 @@ After the challenge allocation, each team will receive a laptop containing the r
 
 The participant release must be validated before laptop imaging: exclude organiser-only ground truth, hidden questions, answer keys and scoring materials.
 
-No raw Volve dataset is stored in this repository. Teams must follow event rules on external services, data sharing and third-party APIs.
+Approved challenge files are stored under [Track 1](../data/track_1/) and [Track 2](../data/track_2/) in this repository. Use the official [Track 1 targets](../data/track_1/metadata/target_depths_template.csv) and [Track 2 questions](../data/track_2/open_test/open_test_questions.csv); the separate track repositories contain synthetic examples. Private reference answers remain in the organiser repository. Teams must follow event rules on external services, data sharing and third-party APIs.
 
 See the [participant challenge brief](../CHALLENGE_BRIEF.md) for challenge requirements.

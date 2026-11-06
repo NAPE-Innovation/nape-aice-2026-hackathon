@@ -23,6 +23,15 @@ The README should explain how to prepare the environment, where the input data a
 - **Track 1 — Legacy Well Log Digitisation:** `page_id,well,depth_m,curve,value,confidence`
 - **Track 2 — Intelligent Well Archive:** `question_id,answer,evidence,confidence`
 
+Use the current template for your allocated track:
+
+- [Track 1 target template](../data/track_1/metadata/target_depths_template.csv): 2,321 readings. This is the single official Track 1 template; the older synthetic duplicate has been removed.
+- [Track 2 questions](../data/track_2/open_test/open_test_questions.csv) and [answer template](template/outputs/track2_predictions_template.csv): 32 IDs, T2-001 through T2-032.
+
+`notes` is optional. Confidence may be blank or a finite number between 0 and 1. Missing Track 1 readings remain blank and earn zero; do not enter NaN, Inf or a made-up value. Duplicate keys are checked after normalizing depth to two decimal places and curve names to uppercase. Depths are metres; RT must be positive. The 44 off-scale and 143 boundary targets removed from Track 1 are recorded in [excluded targets](../data/track_1/metadata/excluded_targets.csv).
+
+For Track 2, `evidence` contains semicolon-separated page IDs from [evidence_pages.csv](../data/track_2/metadata/evidence_pages.csv), not old section IDs. Each ID maps to an existing PDF, page number and checksum. Cite every page needed to support your answer. If the supplied reports do not provide the information, explicitly say so. Dates refer to report filenames/period ends. The open score uses equal correctness, faithfulness and groundedness ratings (0, 0.5 or 1 each); judges verify the cited material. Equivalent wording and valid alternative evidence are accepted.
+
 Use the provided prediction template for your allocated track. Preserve requested identifiers. The required prediction path is **`submission/predictions.csv`**. Keep all final deliverables inside `submission/`; supporting artefacts can be stored there in subfolders. Teams may use the repository root for drafts or experiments, but only the final `submission/` directory (and explicitly documented approved dependencies) will be reviewed. The organisers will announce the submission deadline. Your assigned private team repository's `main` branch is the official submission; no separate email or Drive upload is required unless the organisers announce a contingency. At the deadline, NAPE will record the team repository's commit SHA so the scored CSV and independently executed notebook come from the same version.
 
 ## How the submission is scored
@@ -37,7 +46,9 @@ Open-test predictions are scored by the NAPE team against the approved reference
 
 For fairness, organiser-run execution uses consistent hardware/resources and documented timing rules across teams. Reference answers are never supplied in the public submission package.
 
-## Check your submission\n\nFor step-by-step cloning, team repository setup and a complete validator example, see the [GitHub Setup and Team Submission Guide](../docs/github-setup-and-submission.md).
+## Check your submission
+
+For step-by-step cloning, team repository setup and a complete validator example, see the [GitHub Setup and Team Submission Guide](../docs/github-setup-and-submission.md).
 
 From the hackathon repository, run:
 

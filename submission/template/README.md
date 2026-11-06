@@ -11,7 +11,7 @@ nape-aice-2026-your-team/
     └── README.md             # setup and running instructions
 ```
 
-Use the track-specific prediction CSV template available under `outputs/` in this hackathon repository as a starting point. Copy/rename it to `predictions.csv` in your submission folder before handover. The included `solution.ipynb` is an empty placeholder: replace its contents with your work.
+Start from the official [Track 1 target template](../../data/track_1/metadata/target_depths_template.csv) or [Track 2 answer template](outputs/track2_predictions_template.csv). The redundant empty Track 1 template has been removed; Track 2 uses the [32 open-test questions](../../data/track_2/open_test/open_test_questions.csv). Copy/rename it to `predictions.csv` in your submission folder before handover. The included `solution.ipynb` is an empty placeholder: replace its contents with your work.
 
 In your submission's README, explain how NAPE reviewers can install requirements, access the input dataset, run the notebook from the beginning and regenerate the predictions. Include any necessary model/index files or instructions for accessing approved services. Do not include secrets.
 
