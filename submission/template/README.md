@@ -18,3 +18,7 @@ In your submission's README, explain how NAPE reviewers can install requirements
 A separate `run_inference.py`, API, Docker image or CI/CD configuration is **not required**. NAPE will run your code after submission and assess reproducibility as part of the 20% inference score.
 
 **Fixed automated scoring path:** `submission/predictions.csv`. The organisers will record the final commit SHA at the submission deadline. See [Submission Guide](../SUBMISSION_GUIDE.md).
+
+## Current official inputs
+
+Use [the Track 1 target template](../../data/track_1/metadata/target_depths_template.csv) or [the Track 2 answer template](outputs/track2_predictions_template.csv) with [the 32 questions](../../data/track_2/open_test/open_test_questions.csv). The synthetic Track 1 template formerly in `outputs/` has been removed so there is one official target list. Save your completed result as `submission/predictions.csv`.

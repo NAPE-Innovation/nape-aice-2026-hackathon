@@ -1,15 +1,12 @@
-# Volve dataset access — DRAFT
+# Volve dataset access
 
-The hackathon uses selected materials from the publicly released Volve Field dataset.
+The approved participant data has one home in this repository:
 
-## Dataset delivery at the event
+- [Track 1](../data/track_1/): log images/PDF, page registry and the official target template.
+- [Track 2](../data/track_2/): the existing 276 documents, their manifest, PDF page registry and 32 open-test questions.
 
-**Participants do not need to download the challenge dataset.** Organisers will preload the approved, challenge-specific dataset onto the laptops before handing them to teams at kickoff.
+Organisers may preload the same files onto event laptops. The separate track repositories contain synthetic starter examples and link here for the actual data. Private answers and organiser extraction outputs are held in the organiser repository, not copied into participant data.
 
-After the challenge allocation, each team will receive a laptop containing the relevant files, metadata, instructions and submission templates. Organisers will confirm the local folder paths and any access instructions at the event.
+Release 2.0.0-rc1 retains the images and reports. Track 1 now has 2,321 targets after documented clipping/boundary exclusions. Track 2 uses the populated 32-question set with consistent T2-001–T2-032 IDs. The document manifest's byte sizes have been refreshed against the files already present.
 
-The participant release must be validated before laptop imaging: exclude organiser-only ground truth, hidden questions, answer keys and scoring materials.
-
-No raw Volve dataset is stored in this repository. Teams must follow event rules on external services, data sharing and third-party APIs.
-
-See the [participant challenge brief](../CHALLENGE_BRIEF.md) for challenge requirements.
+Read the [Submission Guide](../submission/SUBMISSION_GUIDE.md) for templates, missing-value handling and evidence format. Teams must follow the event's rules on external services and data sharing.

@@ -1,0 +1,188 @@
+page_id,well,depth_m,curve,reason
+VOLVE_T1_01_01,15_9-F-1,2769.70,GR,outside_extracted_depth_interval
+VOLVE_T1_01_01,15_9-F-1,2769.70,RT,outside_extracted_depth_interval
+VOLVE_T1_01_01,15_9-F-1,2769.70,RHOB,outside_extracted_depth_interval
+VOLVE_T1_01_01,15_9-F-1,2769.70,NPHI,outside_extracted_depth_interval
+VOLVE_T1_01_01,15_9-F-1,3006.00,GR,outside_extracted_depth_interval
+VOLVE_T1_01_01,15_9-F-1,3006.00,RT,outside_extracted_depth_interval
+VOLVE_T1_01_01,15_9-F-1,3006.00,RHOB,outside_extracted_depth_interval
+VOLVE_T1_01_01,15_9-F-1,3006.00,NPHI,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3174.80,GR,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3174.80,RT,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3174.80,RHOB,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3174.80,NPHI,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3272.10,GR,outside_visible_curve_scale
+VOLVE_T1_01_02,15_9-F-1,3279.00,GR,outside_visible_curve_scale
+VOLVE_T1_01_02,15_9-F-1,3286.00,GR,outside_visible_curve_scale
+VOLVE_T1_01_02,15_9-F-1,3292.90,GR,outside_visible_curve_scale
+VOLVE_T1_01_02,15_9-F-1,3299.80,GR,outside_visible_curve_scale
+VOLVE_T1_01_02,15_9-F-1,3306.80,GR,outside_visible_curve_scale
+VOLVE_T1_01_02,15_9-F-1,3313.70,GR,outside_visible_curve_scale
+VOLVE_T1_01_02,15_9-F-1,3411.00,GR,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3411.00,RT,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3411.00,RHOB,outside_extracted_depth_interval
+VOLVE_T1_01_02,15_9-F-1,3411.00,NPHI,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,2778.00,GR,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,2778.00,RT,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,2778.00,RHOB,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,2778.00,NPHI,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,3026.20,GR,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,3026.20,RT,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,3026.20,RHOB,outside_extracted_depth_interval
+VOLVE_T1_02_01,15_9-F-1 A,3026.20,NPHI,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3203.40,GR,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3203.40,RT,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3203.40,RHOB,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3203.40,NPHI,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3363.90,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3371.20,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3378.50,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3385.80,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3393.10,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3400.40,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3407.70,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3415.00,GR,outside_visible_curve_scale
+VOLVE_T1_02_02,15_9-F-1 A,3451.50,GR,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3451.50,RT,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3451.50,RHOB,outside_extracted_depth_interval
+VOLVE_T1_02_02,15_9-F-1 A,3451.50,NPHI,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3154.90,GR,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3154.90,RT,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3154.90,RHOB,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3154.90,NPHI,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3174.30,GR,outside_visible_curve_scale
+VOLVE_T1_03_01,15_9-F-1 B,3180.80,GR,outside_visible_curve_scale
+VOLVE_T1_03_01,15_9-F-1 B,3187.30,GR,outside_visible_curve_scale
+VOLVE_T1_03_01,15_9-F-1 B,3193.70,GR,outside_visible_curve_scale
+VOLVE_T1_03_01,15_9-F-1 B,3200.20,GR,outside_visible_curve_scale
+VOLVE_T1_03_01,15_9-F-1 B,3374.90,GR,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3374.90,RT,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3374.90,RHOB,outside_extracted_depth_interval
+VOLVE_T1_03_01,15_9-F-1 B,3374.90,NPHI,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3293.60,GR,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3293.60,RT,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3293.60,RHOB,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3293.60,NPHI,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3415.00,GR,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3415.00,RT,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3415.00,RHOB,outside_extracted_depth_interval
+VOLVE_T1_03_02,15_9-F-1 B,3415.00,NPHI,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3223.30,GR,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3223.30,RT,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3223.30,RHOB,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3223.30,NPHI,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3461.50,GR,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3461.50,RT,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3461.50,RHOB,outside_extracted_depth_interval
+VOLVE_T1_04_01,15_9-F-1 C,3461.50,NPHI,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3631.70,GR,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3631.70,RT,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3631.70,RHOB,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3631.70,NPHI,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3869.90,GR,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3869.90,RT,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3869.90,RHOB,outside_extracted_depth_interval
+VOLVE_T1_04_02,15_9-F-1 C,3869.90,NPHI,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,2767.60,GR,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,2767.60,RT,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,2767.60,RHOB,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,2767.60,NPHI,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,3041.00,GR,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,3041.00,RT,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,3041.00,RHOB,outside_extracted_depth_interval
+VOLVE_T1_05_01,15_9-F-11 A,3041.00,NPHI,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3236.30,GR,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3236.30,RT,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3236.30,RHOB,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3236.30,NPHI,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3509.70,GR,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3509.70,RT,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3509.70,RHOB,outside_extracted_depth_interval
+VOLVE_T1_05_02,15_9-F-11 A,3509.70,NPHI,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3452.30,GR,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3452.30,RT,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3452.30,RHOB,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3452.30,NPHI,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3623.70,RT,outside_visible_curve_scale
+VOLVE_T1_06_01,15_9-F-11 B,3816.60,GR,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3816.60,RT,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3816.60,RHOB,outside_extracted_depth_interval
+VOLVE_T1_06_01,15_9-F-11 B,3816.60,NPHI,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4076.80,GR,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4076.80,RT,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4076.80,RHOB,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4076.80,NPHI,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4087.50,RT,outside_visible_curve_scale
+VOLVE_T1_06_02,15_9-F-11 B,4109.00,RT,outside_visible_curve_scale
+VOLVE_T1_06_02,15_9-F-11 B,4226.80,RT,outside_visible_curve_scale
+VOLVE_T1_06_02,15_9-F-11 B,4280.40,RT,outside_visible_curve_scale
+VOLVE_T1_06_02,15_9-F-11 B,4441.20,GR,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4441.20,RT,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4441.20,RHOB,outside_extracted_depth_interval
+VOLVE_T1_06_02,15_9-F-11 B,4441.20,NPHI,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,2898.80,GR,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,2898.80,RT,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,2898.80,RHOB,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,2898.80,NPHI,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,3360.20,GR,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,3360.20,RT,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,3360.20,RHOB,outside_extracted_depth_interval
+VOLVE_T1_07_01,15_9-F-11 T2,3360.20,NPHI,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,3689.80,GR,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,3689.80,RT,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,3689.80,RHOB,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,3689.80,NPHI,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,4151.20,GR,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,4151.20,RT,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,4151.20,RHOB,outside_extracted_depth_interval
+VOLVE_T1_07_02,15_9-F-11 T2,4151.20,NPHI,outside_extracted_depth_interval
+VOLVE_T1_08_01,15_9-F-12,1174.85,GR,outside_extracted_depth_interval
+VOLVE_T1_08_01,15_9-F-12,1174.85,RT,outside_extracted_depth_interval
+VOLVE_T1_08_01,15_9-F-12,1174.85,NPHI,outside_extracted_depth_interval
+VOLVE_T1_08_01,15_9-F-12,1190.09,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1205.33,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1235.96,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1266.60,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1281.84,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1343.10,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1358.34,RHOB,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1358.34,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1373.58,RHOB,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1388.97,RHOB,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1388.97,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1480.72,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1557.22,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1679.45,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_01,15_9-F-12,1694.69,GR,outside_extracted_depth_interval
+VOLVE_T1_08_01,15_9-F-12,1694.69,RT,outside_extracted_depth_interval
+VOLVE_T1_08_01,15_9-F-12,1694.69,RHOB,outside_extracted_depth_interval
+VOLVE_T1_08_01,15_9-F-12,1694.69,NPHI,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2300.63,GR,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2300.63,RT,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2300.63,RHOB,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2300.63,NPHI,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2438.25,RHOB,outside_visible_curve_scale
+VOLVE_T1_08_02,15_9-F-12,2468.88,RHOB,outside_visible_curve_scale
+VOLVE_T1_08_02,15_9-F-12,2545.23,NPHI,outside_visible_curve_scale
+VOLVE_T1_08_02,15_9-F-12,2652.37,RT,outside_visible_curve_scale
+VOLVE_T1_08_02,15_9-F-12,2820.47,GR,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2820.47,RT,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2820.47,RHOB,outside_extracted_depth_interval
+VOLVE_T1_08_02,15_9-F-12,2820.47,NPHI,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3524.80,GR,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3524.80,RT,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3524.80,RHOB,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3524.80,NPHI,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3844.50,GR,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3844.50,RT,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3844.50,RHOB,outside_extracted_depth_interval
+VOLVE_T1_09_01,15_9-F-15 D,3844.50,NPHI,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4072.80,GR,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4072.80,RT,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4072.80,RHOB,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4072.80,NPHI,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4110.40,RT,outside_visible_curve_scale
+VOLVE_T1_09_02,15_9-F-15 D,4392.40,GR,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4392.40,RT,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4392.40,RHOB,outside_extracted_depth_interval
+VOLVE_T1_09_02,15_9-F-15 D,4392.40,NPHI,outside_extracted_depth_interval

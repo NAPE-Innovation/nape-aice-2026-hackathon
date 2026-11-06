@@ -30,52 +30,39 @@ def validate_structure(folder):
     return {"valid": not errors, "errors": errors, "notebooks": len(notebooks)}
 
 def validate_csv(path, track):
-    path = Path(path)
-    errors = []
-    if not path.is_file():
-        return {"valid": False, "errors": ["Predictions CSV not found"], "rows": 0}
+    from decimal import Decimal, InvalidOperation, ROUND_HALF_EVEN
+    errors=[]
     try:
-        with path.open(encoding="utf-8-sig", newline="") as handle:
-            reader = csv.DictReader(handle)
-            columns = reader.fieldnames or []
-            missing = [name for name in HEADERS[track] if name not in columns]
-            if missing:
-                errors.append("Missing columns: " + ", ".join(missing))
-            if len(columns) != len(set(columns)):
-                errors.append("Duplicate CSV column headers")
-            rows = list(reader)
-    except (UnicodeDecodeError, csv.Error) as exc:
-        return {"valid": False, "errors": [f"Unreadable CSV: {exc}"], "rows": 0}
-    keys = ("page_id", "depth_m", "curve") if track == "1" else ("question_id",)
-    seen = set()
-    for number, row in enumerate(rows, 2):
-        if None in row or any(v is None for v in row.values()):
-            errors.append(f"Line {number}: incorrect number of columns")
-            continue
-        key = tuple((row.get(k) or "").strip() for k in keys)
-        if not all(key):
-            errors.append(f"Line {number}: missing identifier")
-        elif key in seen:
-            errors.append(f"Line {number}: duplicate identifier")
-        seen.add(key)
-        if track == "1":
-            for field in ("depth_m", "value"):
-                try:
-                    value = float(row.get(field, ""))
-                    if not math.isfinite(value):
-                        errors.append(f"Line {number}: non-finite {field}")
-                except (ValueError, TypeError):
-                    errors.append(f"Line {number}: invalid {field}")
-        if (row.get("confidence") or "").strip():
-            try:
-                confidence = float(row["confidence"])
-                if not math.isfinite(confidence) or not 0 <= confidence <= 1:
-                    errors.append(f"Line {number}: confidence must be between 0 and 1")
-            except ValueError:
-                errors.append(f"Line {number}: invalid confidence")
-    if not rows:
-        errors.append("CSV has no data rows")
-    return {"valid": not errors, "errors": errors, "rows": len(rows)}
+        with Path(path).open(newline='',encoding='utf-8-sig') as handle:
+            reader=csv.DictReader(handle)
+            fields=reader.fieldnames or []
+            if len(fields)!=len(set(fields)) or not set(HEADERS[track]).issubset(fields):
+                raise ValueError('Missing or duplicate CSV columns')
+            rows=list(reader)
+        if not rows:raise ValueError('Predictions CSV is empty')
+        seen=set()
+        for line,row in enumerate(rows,2):
+            if None in row or any(v is None for v in row.values()):
+                raise ValueError(f'Row {line}: malformed CSV')
+            if track=='1':
+                depth=Decimal(row['depth_m'].strip())
+                if not depth.is_finite():raise ValueError('Depth must be finite')
+                key=(row['page_id'].strip(),str(depth.quantize(Decimal('0.01'),rounding=ROUND_HALF_EVEN)),row['curve'].strip().upper())
+                if not row['well'].strip() or key[2] not in {'GR','RT','RHOB','NPHI'}:
+                    raise ValueError(f'Row {line}: invalid well or curve')
+            else:key=(row['question_id'].strip(),)
+            if not all(key) or key in seen:raise ValueError(f'Row {line}: missing or duplicate normalized identifier')
+            seen.add(key)
+            for field in (['confidence','value'] if track=='1' else ['confidence']):
+                text=row[field].strip()
+                if not text:continue  # Missing readings and unset confidence are allowed.
+                number=float(text)
+                if not math.isfinite(number):raise ValueError(f'Row {line}: non-finite {field}')
+                if field=='confidence' and not 0<=number<=1:raise ValueError(f'Row {line}: confidence outside [0,1]')
+                if field=='value' and key[2]=='RT' and number<=0:raise ValueError(f'Row {line}: RT must be positive')
+        return {'valid':True,'errors':[],'rows':len(rows)}
+    except (OSError,ValueError,InvalidOperation,csv.Error) as exc:
+        return {'valid':False,'errors':[str(exc)],'rows':0}
 
 def main():
     parser = argparse.ArgumentParser()
