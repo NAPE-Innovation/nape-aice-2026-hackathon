@@ -4,7 +4,7 @@
 
 ## Before you begin
 
-- Create a GitHub account and send your **exact GitHub username** to the organisers.
+- **Sign in to your existing GitHub account or [create an account](https://github.com/signup)**, then send your **exact GitHub username** to the organisers.
 - Install Git and Python/Jupyter as needed.
 - Accept invitations to the shared resources repository and your team's private repository. If cloning a private repository prompts for authentication, sign in using GitHub CLI (`gh auth login`), Git Credential Manager or an SSH key; a GitHub account password cannot be used as an HTTPS Git password.
 
@@ -15,7 +15,7 @@ git clone https://github.com/NAPE-Innovation/nape-aice-2026-hackathon.git
 cd nape-aice-2026-hackathon
 ```
 
-Read `CHALLENGE_BRIEF.md`, `submission/SUBMISSION_GUIDE.md`, and the starter notebook for your assigned track. The approved dataset is in `data/track_1/` or `data/track_2/`. **Do not push solutions into this shared repository.**
+Read the [Challenge Brief](../CHALLENGE_BRIEF.md), [Submission Guide](submission-guide.md), [Data Access Guide](data-access.md), and the [Track 1](../starter-kits/track-1/log_digitisation_starter.ipynb) or [Track 2](../starter-kits/track-2/archive_intelligence_starter.ipynb) starter notebook. Data is in [Track 1](../data/track_1/) or [Track 2](../data/track_2/). **Do not push solutions into this shared repository.**
 
 ## 2. Clone your assigned private team repository
 
@@ -60,14 +60,12 @@ Commit regularly. If your team uses feature branches, merge the final work into 
 
 ## 5. Validate your submission — worked example
 
-The validator lives in the **shared hackathon repository**, but you point it to the `submission/` folder inside **your team repository**.
-
-Assume you cloned both repositories into the same parent folder:
+The final **Validate Your Submission** section in each starter notebook checks your team's submission folder. For example, if the shared and team repositories are next to each other:
 
 ```text
 hackathon-work/
-├── nape-aice-2026-hackathon/       # shared resources and validator
-└── nape-aice-2026-pipeline-x/      # example team repository
+├── nape-aice-2026-hackathon/
+└── nape-aice-2026-pipeline-x/
     └── submission/
         ├── solution.ipynb
         ├── predictions.csv
@@ -75,20 +73,13 @@ hackathon-work/
         └── README.md
 ```
 
-**Example for a Track 1 team:** from the **shared repository root**:
+Open the [Track 1](../starter-kits/track-1/log_digitisation_starter.ipynb) or [Track 2](../starter-kits/track-2/archive_intelligence_starter.ipynb) notebook and in its final validation cell set:
 
-```bash
-cd ../nape-aice-2026-hackathon
-python submission/validate_submission.py --track 1 --submission ../nape-aice-2026-pipeline-x/submission
+```python
+SUBMISSION_DIR = Path("../nape-aice-2026-pipeline-x/submission")
 ```
 
-**Example for a Track 2 team:** run the same command with `--track 2`:
-
-```bash
-python submission/validate_submission.py --track 2 --submission ../nape-aice-2026-pipeline-x/submission
-```
-
-Use your own team folder in place of `nape-aice-2026-pipeline-x`. A valid submission returns a JSON report with `"valid": true` for both `structure` and `csv`. If validation fails, read the `errors` fields, correct your files and rerun the command. **This does not check prediction accuracy or execute your notebook.**
+Replace `pipeline-x` with your own team name. The path is relative to the notebook's **current working directory**; adjust it as needed. Run the validation cells and correct any reported errors. The check does not execute your solution or score prediction accuracy.
 
 Prediction CSV headers must be:
 
@@ -105,4 +96,4 @@ Before the deadline, check `git status` for uncommitted work, `git push origin m
 
 **Submission deadline:** To be announced by the organisers.
 
-For the full format and scoring requirements, see [Submission Guide](../submission/SUBMISSION_GUIDE.md).
+For the full format and scoring requirements, see [Submission Guide](submission-guide.md).

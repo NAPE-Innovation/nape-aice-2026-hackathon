@@ -11,7 +11,7 @@ This repository contains participant resources for six finalist teams. Challenge
 1. Read the [Challenge Brief](CHALLENGE_BRIEF.md) for both challenge tracks.
 2. Review the [Competition Rules](docs/competition-rules.md) and [Data Access Guide](docs/data-access.md).
 3. Read the [Participant Technical Guide](docs/participant-technical-guide.md). Optional starter notebooks are available for [Track 1](starter-kits/track-1/log_digitisation_starter.ipynb) and [Track 2](starter-kits/track-2/archive_intelligence_starter.ipynb).
-4. Follow the [GitHub Setup and Team Submission Guide](docs/github-setup-and-submission.md) to clone the repositories, validate your files and submit to your assigned private team repository.\n5. Follow the [Submission Guide](submission/SUBMISSION_GUIDE.md) and [Submission Template](submission/template/README.md).
+4. Follow the [GitHub Setup and Team Submission Guide](docs/github-setup-and-submission.md) to clone the repositories, validate your files and submit to your assigned private team repository.\n5. Follow the [Submission Guide](docs/submission-guide.md) and [Submission Template](submission/template/README.md).
 
 ## Submission at a glance
 
@@ -24,7 +24,7 @@ In **your assigned team GitHub repository**, create a `submission/` folder at th
 - `CHALLENGE_BRIEF.md` — both challenge descriptions and deliverables
 - `docs/` — competition rules, data access and technical guidance
 - `starter-kits/track-1/` and `starter-kits/track-2/` — optional notebook starters
-- `submission/` — submission format, validator and prediction templates
+- `submission/` — submission templates; validation is in starter notebooks
 - `evaluation/` — public explanation of the evaluation approach
 
 **To be communicated:** final submission deadline, available compute and network/API policy. Do not commit supplied raw datasets, confidential reference answers, private materials or credentials.

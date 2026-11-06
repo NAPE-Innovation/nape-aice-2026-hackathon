@@ -37,15 +37,8 @@ Open-test predictions are scored by the NAPE team against the approved reference
 
 For fairness, organiser-run execution uses consistent hardware/resources and documented timing rules across teams. Reference answers are never supplied in the public submission package.
 
-## Check your submission\n\nFor step-by-step cloning, team repository setup and a complete validator example, see the [GitHub Setup and Team Submission Guide](../docs/github-setup-and-submission.md).
+## Check your submission\n\nFor step-by-step cloning, team repository setup and a complete validator example, see the [GitHub Setup and Team Submission Guide](github-setup-and-submission.md).
 
-From the hackathon repository, run:
+Open the starter notebook for your assigned track and run its final **Validate Your Submission** cells. Set `SUBMISSION_DIR` to the `submission/` folder in your private team repository. The check reports missing files, malformed notebooks, incorrect CSV headers, duplicate identifiers and invalid values. It does **not** run your solution or score predictions. The [GitHub Setup Guide](github-setup-and-submission.md) contains a worked example.
 
-```bash
-python submission/validate_submission.py --track 1 --submission /path/to/submission
-# Or use --track 2 for Archive Intelligence
-```
-
-The check confirms required files, notebook structure and basic prediction CSV integrity. It does **not** run the notebook or score prediction quality.
-
-See [Competition Rules](../docs/competition-rules.md) and [Participant Technical Guide](../docs/participant-technical-guide.md).
+See [Competition Rules](competition-rules.md) and [Participant Technical Guide](participant-technical-guide.md).

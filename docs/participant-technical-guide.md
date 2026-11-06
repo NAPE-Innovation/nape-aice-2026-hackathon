@@ -2,11 +2,11 @@
 
 **NAPE AICE 2026 Hackathon | 7–8 November 2026 | Both tracks**
 
-The [Challenge Brief](../CHALLENGE_BRIEF.md) defines the tasks and prediction formats. The [Submission Guide](../submission/SUBMISSION_GUIDE.md) explains how to submit. Starter notebooks are optional teaching aids, not finished solutions.
+The [Challenge Brief](../CHALLENGE_BRIEF.md) defines the tasks and prediction formats. The [Submission Guide](submission-guide.md) explains how to submit. Starter notebooks are optional teaching aids, not finished solutions.
 
 ## 1. Set up your environment
 
-Use the approved track-specific data provided on the organiser-supplied team laptop. The organisers will explain the event-day data paths. Inspect your track's input manifest and CSV template. Never upload restricted data to unauthorised external services, and never include credentials or supplied raw datasets in your code submission.
+Use the approved track-specific data from this repository or the organiser-provided team laptop. See [Data Access](data-access.md) for paths. Inspect your track's input manifest and CSV template. Never upload restricted data to unauthorised external services, and never include credentials or supplied raw datasets in your code submission.
 
 You may use Python packages, pretrained models and approved APIs in accordance with the [Competition Rules](competition-rules.md). List dependencies in `requirements.txt` and disclose relevant third-party services.
 
@@ -14,9 +14,9 @@ You may use Python packages, pretrained models and approved APIs in accordance w
 
 You can implement your approach in one or more **Jupyter notebooks**, including preprocessing, extraction, model training, retrieval, generation and prediction as appropriate. You do not have to package your code as a production application or write a separate inference command.
 
-**Track 1 — Legacy Well Log Digitisation:** use the approved log images/PDFs and metadata to produce `page_id,well,depth_m,curve,value,confidence,notes`. [Track 1 starter notebook](../starter-kits/track-1/log_digitisation_starter.ipynb).
+**Track 1 — Legacy Well Log Digitisation:** use the approved log images/PDFs and metadata to produce `page_id,well,depth_m,curve,value,confidence`. [Track 1 starter notebook](../starter-kits/track-1/log_digitisation_starter.ipynb).
 
-**Track 2 — Intelligent Well Archive:** use the approved archive and open questions to produce `question_id,answer,evidence,confidence,notes`. Evidence should identify supporting archive documents. [Track 2 starter notebook](../starter-kits/track-2/archive_intelligence_starter.ipynb).
+**Track 2 — Intelligent Well Archive:** use the approved archive and open questions to produce `question_id,answer,evidence,confidence`. Evidence should identify supporting archive documents. [Track 2 starter notebook](../starter-kits/track-2/archive_intelligence_starter.ipynb).
 
 The starter notebooks demonstrate techniques or input inspection but are not complete competition submissions.
 
@@ -36,11 +36,7 @@ Include:
 
 Additional model or index files are optional if relevant. No Docker image, API, CI/CD project or `run_inference.py` is required.
 
-Validate the package with:
-```bash
-python submission/validate_submission.py --track 1 --submission /path/to/submission
-```
-Use `--track 2` if assigned Archive Intelligence. This check does not execute your notebook or measure solution accuracy.
+Validate the submission using the final **Validate Your Submission** cells in the [Track 1](../starter-kits/track-1/log_digitisation_starter.ipynb) or [Track 2](../starter-kits/track-2/archive_intelligence_starter.ipynb) starter notebook. Set `SUBMISSION_DIR` to your team repository's `submission/` folder. This checks structure and CSV integrity, not solution execution or accuracy.
 
 ## 5. Judging and technical review
 
