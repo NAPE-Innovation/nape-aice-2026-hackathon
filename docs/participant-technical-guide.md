@@ -46,4 +46,4 @@ Validate the submission using the final **Validate Your Submission** cells in th
 
 **Inference / reproducibility (20%):** after submission, NAPE reviewers execute the team's submitted notebook/code independently using its requirements and instructions, then assess success, output validity, reproducibility and execution time using consistent resources and timing rules. No automated hidden-test scoring is used.
 
-Report missing data, environment issues or unclear instructions to the event technical support team. Submission deadline and exact handover details will be communicated to all teams.
+Report missing data, environment issues or unclear instructions to the event technical support team. Submission deadline: **8 November 2026 at 18:00 WAT (UTC+1)**. Notebook execution is limited to 30 minutes on consistent organiser hardware. See the [Submission Guide](submission-guide.md) for the approved API policy and Track 2 review rubric.
