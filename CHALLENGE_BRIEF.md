@@ -81,6 +81,6 @@ Teams submit notebook(s), `predictions.csv`, `requirements.txt`, and a `README.m
 - Present and explain the solution during judging; live notebook execution is not required.
 - Do not seek access to organiser-only reference/evaluation materials.
 - NAPE technical reviewers will independently execute the submitted notebook/code after handover using the supplied instructions and consistent resources. There is no automated hidden-test scoring.
-- Submission packaging, channel, deadline and execution instructions are maintained in the separate [Submission Guide](submission/SUBMISSION_GUIDE.md). The [Competition Rules](docs/competition-rules.md) govern permitted tools, external services, conduct and fairness. The approved judging rubric governs scores and tie-breaks.
+- Submission packaging, channel, deadline and execution instructions are maintained in the separate [Submission Guide](docs/submission-guide.md). The [Competition Rules](docs/competition-rules.md) govern permitted tools, external services, conduct and fairness. The approved judging rubric governs scores and tie-breaks.
 
 **Goal:** Unlock existing data, reveal reliable insights and demonstrate practical value for subsurface workflows.

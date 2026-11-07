@@ -17,4 +17,4 @@ In your submission's README, explain how NAPE reviewers can install requirements
 
 A separate `run_inference.py`, API, Docker image or CI/CD configuration is **not required**. NAPE will run your code after submission and assess reproducibility as part of the 20% inference score.
 
-**Fixed automated scoring path:** `submission/predictions.csv`. The organisers will record the final commit SHA at the submission deadline. See [Submission Guide](../SUBMISSION_GUIDE.md).
+**Fixed automated scoring path:** `submission/predictions.csv`. The organisers will record the final commit SHA at the submission deadline. See [Submission Guide](../../docs/submission-guide.md).

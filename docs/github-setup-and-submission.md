@@ -94,6 +94,6 @@ Use the track-specific CSV template supplied in `submission/template/outputs/`. 
 
 Before the deadline, check `git status` for uncommitted work, `git push origin main` for successful upload, and GitHub's web interface for the latest files. Do not commit API keys, secrets, raw supplied datasets or confidential reference answers.
 
-**Submission deadline:** To be announced by the organisers.
+**Submission deadline:** 8 November 2026 at 18:00 WAT (UTC+1).
 
 For the full format and scoring requirements, see [Submission Guide](submission-guide.md).
