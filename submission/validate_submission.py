@@ -9,6 +9,12 @@ Run it from the repository root:
 
     python submission/validate_submission.py --track 1 ../nape-aice-2026-your-team/submission
 
+Track 1 teams may submit only the published target depths (as in the
+template) or their full extracted logs. Only the target depths are scored:
+each target takes your reading of the same page and curve at the nearest
+depth you submitted, if it is within DEPTH_TOLERANCE_M. Rows between targets
+are allowed and ignored.
+
 or import it in a notebook:
 
     from validate_submission import validate_submission
@@ -17,6 +23,7 @@ or import it in a notebook:
 from __future__ import annotations
 
 import argparse
+import bisect
 import csv
 import json
 import math
@@ -34,6 +41,10 @@ OPTIONAL_COLUMNS = {
     2: ("notes",),
 }
 REQUIRED_FILES = ("README.md", "requirements.txt", "predictions.csv")
+
+# Track 1: how far (in metres) a submitted depth may be from a target depth and
+# still be scored for it. Matches the organisers' scorer.
+DEPTH_TOLERANCE_M = 0.10
 
 # Where the published targets and questions live, relative to data/track_N.
 EXPECTED_ROWS_FILE = {
@@ -66,6 +77,24 @@ def _key(row: dict, track: int) -> tuple:
 
 def _well(value: str) -> str:
     return (value or "").strip().upper().replace("/", "_")
+
+
+def _track1_targets(expected: dict) -> tuple[dict, dict]:
+    """Published pages (page_id -> well) and target depths per (page_id, curve)."""
+    pages, depths = {}, {}
+    for (page, depth_key, curve), row in expected.items():
+        pages[page] = _well(row.get("well"))
+        depths.setdefault((page, curve), []).append(float(depth_key))
+    return pages, depths
+
+
+def _has_reading_near(sorted_depths: list[float], depth: float) -> bool:
+    i = bisect.bisect_left(sorted_depths, depth)
+    return any(
+        abs(sorted_depths[j] - depth) <= DEPTH_TOLERANCE_M + 1e-9
+        for j in (i - 1, i)
+        if 0 <= j < len(sorted_depths)
+    )
 
 
 def _read_csv(path: Path) -> tuple[list[str], list[dict]]:
@@ -110,9 +139,11 @@ def validate_structure(folder) -> dict:
 def validate_csv(path, track: int, expected: dict | None = None) -> dict:
     """Check predictions.csv columns, values and identifiers.
 
-    If `expected` (from load_expected) is given, also check every row matches a
-    published target or question. Missing targets are warnings because they
-    simply score zero; unknown targets are errors because scoring rejects them.
+    If `expected` (from load_expected) is given, also check the rows against the
+    published pages or questions. Track 1 rows at depths between targets are
+    fine (full logs are allowed). Unknown pages or questions and wrong wells are
+    errors because scoring rejects them; uncovered targets are warnings because
+    they simply score zero.
     """
     track = int(track)
     path = Path(path)
@@ -137,6 +168,9 @@ def validate_csv(path, track: int, expected: dict | None = None) -> dict:
 
     seen = set()
     unknown = 0
+    pages, target_depths = _track1_targets(expected) if expected is not None and track == 1 else ({}, {})
+    readings: dict = {}
+    ignored_curves: set = set()
     for number, row in enumerate(rows, 2):
         if None in row or any(v is None for v in row.values()):
             errors.append(f"Line {number}: incorrect number of columns")
@@ -176,23 +210,43 @@ def validate_csv(path, track: int, expected: dict | None = None) -> dict:
             except ValueError:
                 errors.append(f"Line {number}: invalid confidence")
 
-        if expected is not None:
-            target = expected.get(key)
-            if target is None:
+        if expected is not None and track == 1:
+            page, _, curve = key
+            if page not in pages:
                 unknown += 1
                 if unknown <= 5:
-                    errors.append(f"Line {number}: {key} is not a published target or question")
-            elif track == 1 and _well(row.get("well")) != _well(target.get("well")):
-                errors.append(f"Line {number}: wrong well for {key}")
+                    errors.append(f"Line {number}: {page} is not a published page_id")
+            elif _well(row.get("well")) != pages[page]:
+                errors.append(f"Line {number}: wrong well for {page} (expected {pages[page]})")
+            elif (page, curve) not in target_depths:
+                ignored_curves.add(curve)
+            elif (row.get("value") or "").strip():
+                readings.setdefault((page, curve), []).append(depth)
+        elif expected is not None and key not in expected:
+            unknown += 1
+            if unknown <= 5:
+                errors.append(f"Line {number}: {key} is not a published question")
 
     if unknown > 5:
-        errors.append(f"{unknown} rows in total are not published targets or questions")
+        errors.append(f"{unknown} rows in total have an unknown page_id or question_id")
     if not rows:
         errors.append("CSV has no data rows")
-    if expected is not None:
+    if ignored_curves:
+        warnings.append("Curves not scored on some pages (ignored): " + ", ".join(sorted(ignored_curves)))
+    if expected is not None and track == 1:
+        absent = 0
+        for group, depths in target_depths.items():
+            submitted = sorted(readings.get(group, []))
+            absent += sum(1 for depth in depths if not _has_reading_near(submitted, depth))
+        if absent:
+            warnings.append(
+                f"{absent} of {len(expected)} target depths have no reading within "
+                f"{DEPTH_TOLERANCE_M} m; they will score zero"
+            )
+    elif expected is not None:
         absent = len(set(expected) - seen)
         if absent:
-            warnings.append(f"{absent} of {len(expected)} targets or questions have no row; they will score zero")
+            warnings.append(f"{absent} of {len(expected)} questions have no row; they will score zero")
     return {"valid": not errors, "errors": errors, "warnings": warnings, "rows": len(rows)}
 
 

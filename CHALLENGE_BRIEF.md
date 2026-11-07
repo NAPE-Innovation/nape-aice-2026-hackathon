@@ -28,7 +28,7 @@ Build an automated or semi-automated solution to recover accurate curve values a
 Relevant log image pages/combined PDF, page registry and metadata, and a depth/curve target template.
 
 ### Required deliverables
-1. **Completed depth-indexed CSV** using the supplied `submission/template/outputs/track1_predictions_template.csv` (the same targets as `target_depths_template.csv`) with columns `page_id,well,depth_m,curve,value,confidence,notes`; `notes` is optional and `value` may be left blank where no reading can be extracted. Preserve the target identifiers and depth/curve combinations. **LAS output is not required.**
+1. **Completed depth-indexed CSV** using the supplied `submission/template/outputs/track1_predictions_template.csv` (the same targets as `target_depths_template.csv`) with columns `page_id,well,depth_m,curve,value,confidence,notes`; `notes` is optional and `value` may be left blank where no reading can be extracted. You may instead submit your full extracted logs (any depths, same columns). Only the published target depths are scored: each target uses your reading of the same page and curve at the nearest depth you submitted, within 0.10 m. Rows between targets are ignored. Use the published `page_id` and `well` values. **LAS output is not required.**
 2. **Working solution:** reproducible code, notebook or application showing how the values were produced.
 3. **Technical README:** setup and execution steps; image preprocessing; curve identification; depth/value calibration; QC and confidence; assumptions, failure modes and limitations.
 4. **Demonstration:** show extraction on representative images, quality checks and practical use of the resulting numerical data.

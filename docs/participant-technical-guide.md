@@ -14,7 +14,7 @@ You may use Python packages, pretrained models and approved APIs in accordance w
 
 You can implement your approach in one or more **Jupyter notebooks**, including preprocessing, extraction, model training, retrieval, generation and prediction as appropriate. You do not have to package your code as a production application or write a separate inference command.
 
-**Track 1 — Legacy Well Log Digitisation:** use the approved log images/PDFs and metadata to produce `page_id,well,depth_m,curve,value,confidence` (optional `notes`). [Track 1 starter notebook](../starter-kits/track-1/log_digitisation_starter.ipynb).
+**Track 1 — Legacy Well Log Digitisation:** use the approved log images/PDFs and metadata to produce `page_id,well,depth_m,curve,value,confidence` (optional `notes`), at the published target depths or as full extracted logs. Only the target depths are scored, using your reading at the nearest submitted depth within 0.10 m. [Track 1 starter notebook](../starter-kits/track-1/log_digitisation_starter.ipynb).
 
 **Track 2 — Intelligent Well Archive:** use the approved archive and open questions to produce `question_id,answer,evidence,confidence`. Evidence should identify supporting archive documents. [Track 2 starter notebook](../starter-kits/track-2/archive_intelligence_starter.ipynb).
 

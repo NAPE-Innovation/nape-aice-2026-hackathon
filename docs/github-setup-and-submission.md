@@ -91,7 +91,7 @@ Use `--track 2` for Track 2. Errors must be fixed; warnings (for example, target
 
 Prediction CSV headers must be:
 
-- **Track 1:** `page_id,well,depth_m,curve,value,confidence` (optional `notes`)
+- **Track 1:** `page_id,well,depth_m,curve,value,confidence` (optional `notes`). Target depths only, or full extracted logs; only the target depths are scored (nearest submitted depth within 0.10 m).
 - **Track 2:** `question_id,answer,evidence,confidence` (optional `notes`)
 
 Use the track-specific CSV template supplied in `submission/template/outputs/`. Both templates list every published target or question, so keep their identifiers and fill in your answers. The file must contain your actual predictions, not just the header.
