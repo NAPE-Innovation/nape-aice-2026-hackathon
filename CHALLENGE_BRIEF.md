@@ -2,7 +2,7 @@
 
 **Theme:** Unlocking Dormant Value  
 **Dates:** 7–8 November 2026 | **Venue:** Eko Hotel & Suites, Lagos  
-**Duration:** 48 hours | **Status:** Draft — technical review pending
+**Status:** Participant release — 7–8 November 2026
 
 ## Why this matters
 Decades of subsurface records contain information that can inform energy decisions, but historical well logs and technical documents are often difficult to search, analyse or integrate into modern workflows. Your mission is to transform dormant information into useful, verifiable digital assets.
@@ -10,7 +10,7 @@ Decades of subsurface records contain information that can inform energy decisio
 Six finalist teams will be allocated to two challenge tracks (three per track) by a witnessed random draw at the hackathon kickoff.
 
 ## Data and access
-The challenges use curated materials from the publicly released **Volve Field** dataset. The approved, challenge-specific dataset will be **preloaded onto the laptop provided to your team**. No dataset download is required. See [Data access](docs/data-access.md) for event-day access instructions. Use only the **approved participant release** for your assigned challenge. Organiser-only references, withheld numerical ground truth and evaluation questions are not available to participants.
+The challenges use curated materials from the publicly released **Volve Field** dataset. The approved, challenge-specific dataset will be **preloaded onto the laptop provided to your team**. No dataset download is required. See [Data access](docs/data-access.md) for event-day access instructions. Use only the **approved participant release** for your assigned challenge. Organiser-only reference answers and withheld numerical ground truth are not available to participants; the published open-test questions are available for development and testing.
 
 ### Dataset attribution and licensing
 
@@ -48,14 +48,14 @@ Build a workflow that finds and answers technical questions from the supplied ar
 Curated archive documents, document metadata/manifest and an answers template.
 
 ### Required deliverables
-1. **Completed answers CSV** following the supplied template with columns `question_id,answer,evidence,confidence,notes`. Evidence should identify supporting document paths or references.
+1. **Completed answers CSV** following the supplied template with columns `question_id,answer,evidence,confidence` (optional `notes`). The `evidence` field should identify supporting document filename(s), page(s) and section(s), where available. Use semicolons to separate multiple references. `confidence` is a number between 0 and 1, or may be blank.
 2. **Working solution:** reproducible code, notebook or application showing document processing, retrieval and/or extraction and answer generation.
 3. **Technical README:** setup and execution steps; document handling; retrieval/extraction; evidence provenance; confidence, ambiguity and unsupported-answer handling; limitations.
 4. **Demonstration:** answer representative questions and show where the evidence comes from.
 5. **Reproducible notebook:** include any required saved indexes, models and configurations (where applicable), `requirements.txt`, and clear instructions so NAPE reviewers can independently run the submitted notebook and regenerate the CSV.
 
 ### Practice questions and evaluation
-An **open question set** will be provided for development and testing. The final open question set and answer-template IDs will be confirmed in the approved release. Solutions should derive answers from the archive rather than relying on hard-coded answers. The evaluation procedure and final submission instructions will be communicated by organisers.
+The **32 open questions** are published in `data/track_2/open_test/open_test_questions.csv`, with IDs `T2-001` through `T2-032`. Use `submission/template/outputs/track2_predictions_template.csv` as the official answer template. The reference answers remain private. Solutions should derive answers from the archive rather than relying on hard-coded answers. The evaluation procedure and final submission instructions will be communicated by organisers.
 
 A strong solution will return accurate, evidence-supported answers and recognise when the supplied archive does not justify an answer. Optional semantic search, RAG, interfaces and visualisations are welcome but not required.
 
