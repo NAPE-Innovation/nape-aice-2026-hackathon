@@ -79,14 +79,22 @@ Open the [Track 1](../starter-kits/track-1/log_digitisation_starter.ipynb) or [T
 SUBMISSION_DIR = Path("../nape-aice-2026-pipeline-x/submission")
 ```
 
-Replace `pipeline-x` with your own team name. The path is relative to the notebook's **current working directory**; adjust it as needed. Run the validation cells and correct any reported errors. The check does not execute your solution or score prediction accuracy.
+Replace `pipeline-x` with your own team name. The path is relative to the notebook's **current working directory**; adjust it as needed. Run the validation cell and correct any reported errors. The check does not execute your solution or score prediction accuracy.
+
+The notebooks use `submission/validate_submission.py` from this repository. You can also run it from a terminal at the repository root:
+
+```bash
+python submission/validate_submission.py --track 1 ../nape-aice-2026-pipeline-x/submission
+```
+
+Use `--track 2` for Track 2. Errors must be fixed; warnings (for example, targets with no row, which score zero) are for your information.
 
 Prediction CSV headers must be:
 
-- **Track 1:** `page_id,well,depth_m,curve,value,confidence`
-- **Track 2:** `question_id,answer,evidence,confidence`
+- **Track 1:** `page_id,well,depth_m,curve,value,confidence` (optional `notes`)
+- **Track 2:** `question_id,answer,evidence,confidence` (optional `notes`)
 
-Use the track-specific CSV template supplied in `submission/template/outputs/`. The file must contain your actual predictions, not just the header.
+Use the track-specific CSV template supplied in `submission/template/outputs/`. Both templates list every published target or question, so keep their identifiers and fill in your answers. The file must contain your actual predictions, not just the header.
 
 ## 6. Official submission
 

@@ -25,7 +25,7 @@ In **your assigned team GitHub repository**, create a `submission/` folder at th
 - `CHALLENGE_BRIEF.md` — both challenge descriptions and deliverables
 - `docs/` — competition rules, data access and technical guidance
 - `starter-kits/track-1/` and `starter-kits/track-2/` — optional notebook starters
-- `submission/` — submission templates; validation is in starter notebooks
+- `submission/` — submission templates and `validate_submission.py`, the format check used by the starter notebooks
 - `evaluation/` — public explanation of the evaluation approach
 
 **Submission deadline:** 8 November 2026 at 18:00 WAT (UTC+1). **Notebook execution limit:** 30 minutes on the same organiser hardware. See the [Submission Guide](docs/submission-guide.md) for the approved API policy and Track 2 questions/rubric. Do not commit supplied raw datasets, confidential reference answers, private materials or credentials.
